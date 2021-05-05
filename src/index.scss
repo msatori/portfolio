@@ -1,0 +1,21 @@
+$teal: #1ec1c8;
+
+body {
+    margin: 0;
+}
+
+
+.hero {
+    height: 100vh;
+    
+    &-wrapper {
+       background-color: $teal;
+       
+       img {
+           padding: 5% 3% 0 0;
+           height: 80%;
+           width: 90%;
+       }
+
+   }
+}

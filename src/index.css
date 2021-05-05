@@ -1,1 +1,18 @@
-/* No CSS *//*# sourceMappingURL=index.css.map */
+body {
+  margin: 0;
+}
+
+.hero {
+  height: 100vh;
+}
+
+.hero-wrapper {
+  background-color: #1ec1c8;
+}
+
+.hero-wrapper img {
+  padding: 5% 3% 0 0;
+  height: 80%;
+  width: 90%;
+}
+/*# sourceMappingURL=index.css.map */

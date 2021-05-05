@@ -28,7 +28,6 @@ function App() {
         </Switch>
       </Router>
 
-      <Bio />
     </main>
   );
 }
