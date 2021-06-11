@@ -1,4 +1,9 @@
 $teal: #1ec1c8;
+$pale-yellow: #f2e385;
+$heading:  'Advent Pro', sans-serif;
+
+//font imports
+@import url('https://fonts.googleapis.com/css2?family=Advent+Pro:wght@500&display=swap');
 
 body {
     margin: 0;
@@ -6,16 +11,64 @@ body {
 
 
 .hero {
+   
+    overflow: auto;
     height: 100vh;
+       
     
     &-wrapper {
-       background-color: $teal;
+        padding-top: 5%;
        
-       img {
-           padding: 5% 3% 0 0;
-           height: 80%;
-           width: 90%;
-       }
+    }
+    &-img {
 
+       background-image: url('./assets/images/splash.png');
+       background-repeat: no-repeat;
+ 
    }
+
+    &-text {
+        font-family: $heading;
+    }
+
+  
+}
+
+
+//media queries
+@media (max-width: 768px) {
+    .hero {
+        &-img {
+            background-repeat: no-repeat;
+            background-image: url('./assets/images/splash-mobile.png');
+        }
+
+        &-text {
+            h1 {
+                font-size: 40pt;
+            }
+        }
+    }
+}
+
+@media (max-width: 450px) {
+    .hero {
+        &-img {
+            background-repeat: no-repeat;
+
+            position: fixed;
+        }
+
+        &-text {
+            h1 {
+                font-size: 30pt;
+            }
+
+            h3 {
+                font-size: 12pt;
+                color: white;
+                padding-left: 40%;
+            }
+        }
+    }
 }

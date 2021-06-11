@@ -1,18 +1,48 @@
+@import url("https://fonts.googleapis.com/css2?family=Advent+Pro:wght@500&display=swap");
 body {
   margin: 0;
 }
 
 .hero {
+  overflow: auto;
   height: 100vh;
 }
 
 .hero-wrapper {
-  background-color: #1ec1c8;
+  padding-top: 5%;
 }
 
-.hero-wrapper img {
-  padding: 5% 3% 0 0;
-  height: 80%;
-  width: 90%;
+.hero-img {
+  background-image: url("./assets/images/splash.png");
+  background-repeat: no-repeat;
+}
+
+.hero-text {
+  font-family: "Advent Pro", sans-serif;
+}
+
+@media (max-width: 768px) {
+  .hero-img {
+    background-repeat: no-repeat;
+    background-image: url("./assets/images/splash-mobile.png");
+  }
+  .hero-text h1 {
+    font-size: 40pt;
+  }
+}
+
+@media (max-width: 450px) {
+  .hero-img {
+    background-repeat: no-repeat;
+    position: fixed;
+  }
+  .hero-text h1 {
+    font-size: 30pt;
+  }
+  .hero-text h3 {
+    font-size: 12pt;
+    color: white;
+    padding-left: 40%;
+  }
 }
 /*# sourceMappingURL=index.css.map */
