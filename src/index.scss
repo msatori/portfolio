@@ -1,9 +1,9 @@
 $teal: #1ec1c8;
 $pale-yellow: #f2e385;
-$heading:  'Advent Pro', sans-serif;
-
+$heading:  'Liu Jian Mao Cao', cursive;
+$sub-heading: 'Lobster Two', cursive;
 //font imports
-@import url('https://fonts.googleapis.com/css2?family=Advent+Pro:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Liu+Jian+Mao+Cao&family=Lobster+Two&display=swap&effect');
 
 body {
     margin: 0;
@@ -11,21 +11,23 @@ body {
 
 
 .hero {
-   
-    overflow: auto;
-    height: 100vh;
-       
-    
+     
     &-wrapper {
-        padding-top: 5%;
-       
+        height: 90vh;
+        display: flex;
+        justify-content: center;
+        text-align: center;
     }
+    
     &-img {
+        height: 80vh;
+        width: 30%;
+        background-image: url('./assets/images/splash-mobile.png');
+        background-repeat: no-repeat;
+        justify-self: center;
 
-       background-image: url('./assets/images/splash.png');
-       background-repeat: no-repeat;
- 
-   }
+    }
+
 
     &-text {
         font-family: $heading;

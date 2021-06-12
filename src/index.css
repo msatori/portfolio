@@ -1,24 +1,30 @@
-@import url("https://fonts.googleapis.com/css2?family=Advent+Pro:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Liu+Jian+Mao+Cao&family=Lobster+Two&display=swap&effect");
 body {
   margin: 0;
 }
 
-.hero {
-  overflow: auto;
-  height: 100vh;
-}
-
 .hero-wrapper {
-  padding-top: 5%;
+  height: 90vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
 }
 
 .hero-img {
-  background-image: url("./assets/images/splash.png");
+  height: 80vh;
+  width: 30%;
+  background-image: url("./assets/images/splash-mobile.png");
   background-repeat: no-repeat;
+  -ms-grid-column-align: center;
+      justify-self: center;
 }
 
 .hero-text {
-  font-family: "Advent Pro", sans-serif;
+  font-family: "Liu Jian Mao Cao", cursive;
 }
 
 @media (max-width: 768px) {
