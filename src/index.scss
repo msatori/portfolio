@@ -1,10 +1,9 @@
 $teal: #1ec1c8;
 $pale-yellow: #f2e385;
-$heading:  'Liu Jian Mao Cao', cursive;
+$heading:  'Miss Fajardose', cursive;
 $sub-heading: 'Lobster Two', cursive;
 //font imports
-@import url('https://fonts.googleapis.com/css2?family=Liu+Jian+Mao+Cao&family=Lobster+Two&display=swap&effect');
-
+@import url('https://fonts.googleapis.com/css2?family=Lobster+Two&family=Miss+Fajardose&display=swap');
 body {
     margin: 0;
 }
@@ -14,6 +13,7 @@ body {
      
     &-wrapper {
         height: 90vh;
+        width: 100vw;
         display: flex;
         justify-content: center;
         text-align: center;
@@ -31,12 +31,38 @@ body {
 
     &-text {
         font-family: $heading;
+        font-size: 70px;
+        margin-top: 25%;
+        margin-right: 18%;
+        z-index: 999;
+        color: #ccc182;
+        animation: neon 1s ease-in-out infinite alternate;
+        transform: rotate(-15deg);
     }
 
   
 }
 
-
+@keyframes neon {
+    from {
+        text-shadow:
+        0 0 6px rgba(214, 221, 172, 0.92),
+        0 0 30px rgba(199, 172, 50, 0.34),
+        0 0 12px rgba(165, 163, 16, 0.52),
+        0 0 21px rgba(238, 242, 30, 0.92),
+        0 0 34px rgba(242, 238, 30, 0.78),
+        0 0 54px rgba(242, 238, 30, 0.92);
+      }
+      to {
+        text-shadow:
+        0 0 6px rgba(228, 223, 202, 0.98),
+        0 0 30px rgba(228, 223, 202, 0.42),
+        0 0 12px rgba(203, 206, 64, 0.58),
+        0 0 22px rgba(242, 221, 30, 0.84),
+        0 0 38px rgba(185, 172, 95, 0.88),
+        0 0 60px rgb(242, 175, 30);
+      }
+}
 //media queries
 @media (max-width: 768px) {
     .hero {
@@ -54,23 +80,5 @@ body {
 }
 
 @media (max-width: 450px) {
-    .hero {
-        &-img {
-            background-repeat: no-repeat;
-
-            position: fixed;
-        }
-
-        &-text {
-            h1 {
-                font-size: 30pt;
-            }
-
-            h3 {
-                font-size: 12pt;
-                color: white;
-                padding-left: 40%;
-            }
-        }
-    }
+   
 }
