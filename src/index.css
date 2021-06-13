@@ -18,6 +18,8 @@ body {
 }
 
 .hero-btn {
+  -o-border-image: url("./assets/images/btn-border.png");
+     border-image: url("./assets/images/btn-border.png");
   margin: 20pt;
   list-style: none;
   display: inline;
@@ -45,22 +47,15 @@ body {
   }
 }
 
-@media (max-width: 768px) {
+@media (min-width: 360px) and (max-width: 660px) {
   .hero-img {
-    background-repeat: no-repeat;
-    background-image: url("./assets/images/splash-mobile.png");
-  }
-  .hero-heading h1 {
-    font-size: 40pt;
-  }
-  .hero-headingbtn {
-    display: list-item;
+    padding-left: 8%;
   }
 }
 
 @media (max-width: 450px) {
-  .hero-heading {
-    font-size: 30pt;
+  .hero-img {
+    height: 350px;
   }
 }
 /*# sourceMappingURL=index.css.map */

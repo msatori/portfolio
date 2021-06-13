@@ -3,7 +3,7 @@ import {
     Link
 } from "react-router-dom";
 import { MDBCol, MDBRow, } from 'mdb-react-ui-kit';
-import logo from '../../assets/images/splash-850.png';
+import logo from '../../assets/images/splash-650.png';
 export default function HomePage() {
     const pages = [
         {
@@ -21,11 +21,11 @@ export default function HomePage() {
     ];
 
     return (
-        <section className="hero">
+        <section className="hero d-flex justify-content-center">
             
                     <div className="text-center">
               
-                        <img className='img-fluid' src={logo} alt='Maya Santiago Logo' />
+                        <img className='img-fluid hero-img' src={logo} alt='Maya Santiago Logo' />
                    
                         <div className="hero-btns">
                             <ul>
