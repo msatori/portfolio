@@ -3,7 +3,7 @@ import {
     Link
 } from "react-router-dom";
 import { MDBCol, MDBRow, } from 'mdb-react-ui-kit';
-import logo from '../../assets/images/splash-650.png';
+import logo from '../../assets/images/splash-550.png';
 export default function HomePage() {
     const pages = [
         {
