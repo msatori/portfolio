@@ -39,7 +39,7 @@ body {
   font-size: 20pt;
 }
 
-.hero-btn ahover {
+.hero-btn a:hover {
   color: #a4d0e6;
 }
 
