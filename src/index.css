@@ -67,14 +67,28 @@ body {
           justify-content: center;
   -ms-flex-line-pack: center;
       align-content: center;
+  background-image: url("./assets/images/blue-wc.jpg");
+  background-size: 100%;
+}
+
+.resume .card-group {
   text-align: center;
+  margin-right: 3%;
 }
 
 .resume .card {
-  padding-top: 15%;
-  background-image: url("./assets/images/foil.png");
-  background-size: cover;
-  background-position: center;
+  border-radius: 15px;
+  padding: 3%;
+}
+
+@supports ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
+  .card {
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+  }
+  .card:hover {
+    background-color: rgba(238, 179, 53, 0.616);
+  }
 }
 
 @-webkit-keyframes neon {

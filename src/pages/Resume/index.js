@@ -47,17 +47,17 @@ export default function Resume() {
                         </Card>
                     ))}
                 </CardGroup> */}
-            <MDBCardGroup className='text-center'>
+            <MDBCardGroup>
                 {projects.map((project, i) => (
                
                         <MDBCard style={{ width: "35rem", margin: "15%" }}>
-                            <MDBCardImage className="img-fluid" src={require(`../../assets/images/projects/${i}.png`).default} style={{ width: '22rem' }} waves />
-                            <MDBCardBody>
                                 <MDBCardTitle>Card title</MDBCardTitle>
+                            <MDBCardImage src={require(`../../assets/images/projects/${i}.png`).default} style={{ width: '22rem' }} waves />
+                            <MDBCardBody>
                                 <MDBCardText>
                                     {project.description}
                                 </MDBCardText>
-                                <MDBBtn href="#">MDBBtn</MDBBtn>
+                                <MDBBtn href={project.deployUrl}>Visit Site</MDBBtn>
                             </MDBCardBody>
                         </MDBCard>
                   
