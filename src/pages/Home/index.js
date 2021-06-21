@@ -22,22 +22,23 @@ export default function HomePage() {
 
     return (
         <section className="hero d-flex justify-content-center">
-            
-                    <div className="text-center">
-              
-                        <img className='img-fluid hero-img' src={logo} alt='Maya Santiago Logo' />
-                   
-                        <div className="hero-btns">
-                            <ul>
-                                {pages.map((page) => (
-                                    <li className="hero-btn" key={page.name}>
-                                        <Link to={page.link} >{page.name}</Link>
-                                    </li>
-                                ))}
-                            </ul>
-                        </div>
+            <div className="hero-wrapper">
+                <div className="text-center">
+
+                    <img className='img-fluid hero-img' src={logo} alt='Maya Santiago Logo' />
+
+                    <div className="hero-btns">
+                        <ul>
+                            {pages.map((page) => (
+                                <li className="hero-btn" key={page.name}>
+                                    <Link to={page.link} >{page.name}</Link>
+                                </li>
+                            ))}
+                        </ul>
                     </div>
-           
+                </div>
+            </div>
+
         </section>
     )
 }

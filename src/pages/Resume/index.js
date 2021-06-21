@@ -1,7 +1,7 @@
 import { React, useState } from 'react';
-import { MDBBtn, MDBCard, MDBCardBody, MDBCardImage, MDBCardTitle, MDBCardText, MDBRow, MDBCol, MDBView, MDBCardGroup } from 'mdb-react-ui-kit';
+import { MDBBtn, MDBCard, MDBCardBody, MDBCardImage, MDBCardFooter, MDBCardTitle, MDBCardText, MDBRow, MDBCol, MDBView, MDBCardGroup } from 'mdb-react-ui-kit';
 
-export default function Resume({ }) {
+export default function Resume() {
 
     const [projects] = useState([
 
@@ -36,19 +36,37 @@ export default function Resume({ }) {
     ]);
     return (
         <section className="resume">
-            <MDBCardGroup className='row-cols-1 row-cols-md-3 g-4'>
-            {projects.map((project, i) => (
-                <MDBCard key={project.name} style={{ maxWidth: "20rem" }}>
-                    <MDBCardImage src={require(`../../assets/images/projects/${i}.png`).default} style={{ maxWidth: "20rem" }} />
-                    <MDBCardBody>
-                        <MDBCardText>{project.description}</MDBCardText>
-                    </MDBCardBody>
-                </MDBCard>
-            ))}
+
+            {/* <CardGroup>
+                    {projects.map((project, i) => (
+                        <Card key={project.name} style={{ maxWidth: "18rem" }}>
+                            <Card.Img src={require(`../../assets/images/projects/${i}.png`).default} style={{ maxWidth: "18rem" }} />
+                            <Card.Body>
+                                <Card.Text>{project.description}</Card.Text>
+                            </Card.Body>
+                        </Card>
+                    ))}
+                </CardGroup> */}
+            <MDBCardGroup className='text-center'>
+                {projects.map((project, i) => (
+               
+                        <MDBCard style={{ width: "35rem", margin: "15%" }}>
+                            <MDBCardImage className="img-fluid" src={require(`../../assets/images/projects/${i}.png`).default} style={{ width: '22rem' }} waves />
+                            <MDBCardBody>
+                                <MDBCardTitle>Card title</MDBCardTitle>
+                                <MDBCardText>
+                                    {project.description}
+                                </MDBCardText>
+                                <MDBBtn href="#">MDBBtn</MDBBtn>
+                            </MDBCardBody>
+                        </MDBCard>
+                  
+                ))}
             </MDBCardGroup>
-        
+
+
         </section>
 
-        
+
     )
 }

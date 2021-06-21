@@ -4,15 +4,25 @@ body {
 }
 
 .hero {
-  height: 80vh;
-  background-image: url("./assets/images/brick.png");
+  height: 100vh;
+}
+
+.hero-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-position: center;
+  background-size: cover;
+  background-image: url("./assets/images/test4.png");
   background-repeat: no-repeat;
-  background-size: 100%;
+  height: 100%;
 }
 
 .hero-img {
-  padding-left: 30%;
-  opacity: .9;
+  padding-left: 15%;
 }
 
 .hero-btns {
@@ -40,12 +50,31 @@ body {
 }
 
 .hero-btn a:hover {
-  color: #a4d0e6;
+  color: #bdb111;
 }
 
 .hero-btn:hover {
   -webkit-animation: neon 1.5s ease-in-out infinite alternate;
           animation: neon 1.5s ease-in-out infinite alternate;
+}
+
+.resume {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  text-align: center;
+}
+
+.resume .card {
+  padding-top: 15%;
+  background-image: url("./assets/images/foil.png");
+  background-size: cover;
+  background-position: center;
 }
 
 @-webkit-keyframes neon {
