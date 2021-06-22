@@ -5,12 +5,18 @@ import {
   Switch,
   Route,
 } from "react-router-dom";
-
 //page imports
 import HomePage from './pages/Home';
 import Bio from './pages/Bio';
 import Resume from './pages/Resume';
 import Contact from './pages/Contact'
+//utilities
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { fab } from '@fortawesome/free-brands-svg-icons'
+import { faCheckSquare, faCoffee } from '@fortawesome/free-solid-svg-icons'
+
+library.add(fab, faCheckSquare, faCoffee)
+
 
 function App() {
   return (

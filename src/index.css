@@ -14,15 +14,11 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background-position: center;
-  background-size: cover;
-  background-image: url("./assets/images/test4.png");
-  background-repeat: no-repeat;
   height: 100%;
 }
 
 .hero-img {
-  padding-left: 15%;
+  padding-left: 20%;
 }
 
 .hero-btns {
@@ -47,10 +43,6 @@ body {
   color: #083146;
   text-decoration: none;
   font-size: 20pt;
-}
-
-.hero-btn a:hover {
-  color: #bdb111;
 }
 
 .hero-btn:hover {
@@ -84,6 +76,35 @@ body {
 .resume .card-title {
   font-family: "Special Elite", cursive;
   font-size: 25pt;
+}
+
+.contact .container {
+  height: 100vh;
+  background-image: url("./assets/images/blue-block.jpg");
+  background-size: 90%;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 3%;
+}
+
+.contact-content {
+  padding-top: 10%;
+  text-align: center;
+}
+
+.contact-heading {
+  font-family: "Special Elite", cursive;
+  color: #fff;
+}
+
+.contact a {
+  color: #ffff;
+  text-decoration: none;
+}
+
+.contact a:hover {
+  -webkit-animation: neon 1.5s ease-in-out infinite alternate;
+          animation: neon 1.5s ease-in-out infinite alternate;
 }
 
 @supports ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
