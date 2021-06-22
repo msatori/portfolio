@@ -1,8 +1,8 @@
 $teal: #1ec1c8;
 $pale-yellow: #f2e385;
-$heading:  'Pacifico', cursive;
+$heading:  'Special Elite', cursive;
 //font imports
-@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
 
 body {
     margin: 0;
@@ -78,6 +78,11 @@ body {
         border-radius: 15px;
         padding: 3%;
     }
+
+    .card-title {
+        font-family: $heading;
+        font-size: 25pt;
+    }
 }
 
 @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
@@ -86,7 +91,7 @@ body {
       backdrop-filter: blur(10px);
       
       &:hover {
-            background-color: rgba(238, 179, 53, 0.616);  
+            background-color: rgba(155, 167, 235, 0.486);  
         }
     }
 
@@ -114,17 +119,11 @@ body {
       }
 }
 //media queries
-// @media (max-width: 768px) {
-//     .hero {
-//         &-img {
-//             height: 450px;
-//         }
-
-//             &-btn {
-//                 display:list-item;
-//             }
-//         }
-//     }
+@media (max-width: 768px) {
+   .card {
+       width: 100vw;
+   }
+    }
 
 @media(min-width: 360px ) and (max-width: 660px ) {
     .hero {

@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Special+Elite&display=swap");
 body {
   margin: 0;
 }
@@ -38,7 +38,7 @@ body {
   margin: 30pt;
   list-style: none;
   display: inline;
-  font-family: "Pacifico", cursive;
+  font-family: "Special Elite", cursive;
   padding: 10pt 15pt 10pt 15pt;
   width: 100pt;
 }
@@ -81,13 +81,18 @@ body {
   padding: 3%;
 }
 
+.resume .card-title {
+  font-family: "Special Elite", cursive;
+  font-size: 25pt;
+}
+
 @supports ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
   .card {
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
   }
   .card:hover {
-    background-color: rgba(238, 179, 53, 0.616);
+    background-color: rgba(155, 167, 235, 0.486);
   }
 }
 
@@ -106,6 +111,12 @@ body {
   }
   to {
     text-shadow: 0 0 6px rgba(202, 228, 224, 0.98), 0 0 30px rgba(202, 226, 228, 0.42), 0 0 12px rgba(203, 206, 64, 0.58), 0 0 22px rgba(30, 44, 242, 0.84), 0 0 38px rgba(95, 97, 185, 0.88), 0 0 60px #451ef2;
+  }
+}
+
+@media (max-width: 768px) {
+  .card {
+    width: 100vw;
   }
 }
 

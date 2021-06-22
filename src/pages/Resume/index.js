@@ -51,13 +51,15 @@ export default function Resume() {
                 {projects.map((project, i) => (
                
                         <MDBCard style={{ width: "35rem", margin: "15%" }}>
-                                <MDBCardTitle>Card title</MDBCardTitle>
+                                <MDBCardTitle>{project.name}</MDBCardTitle>
                             <MDBCardImage src={require(`../../assets/images/projects/${i}.png`).default} style={{ width: '22rem' }} waves />
                             <MDBCardBody>
                                 <MDBCardText>
                                     {project.description}
                                 </MDBCardText>
                                 <MDBBtn href={project.deployUrl}>Visit Site</MDBBtn>
+                                <br />
+                                <MDBBtn href={project.gitUrl}>Visit GitHub Repository</MDBBtn>
                             </MDBCardBody>
                         </MDBCard>
                   
