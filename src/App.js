@@ -10,6 +10,7 @@ import {
 import HomePage from './pages/Home';
 import Bio from './pages/Bio';
 import Resume from './pages/Resume';
+import Contact from './pages/Contact'
 
 function App() {
   return (
@@ -18,6 +19,9 @@ function App() {
         <Switch>
           <Route path="/about">
             <Bio />
+          </Route>
+          <Route path="/contact">
+            <Contact />
           </Route>
           <Route path="/resume">
             <Resume />

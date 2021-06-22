@@ -52,7 +52,7 @@ export default function Resume() {
                
                         <MDBCard style={{ width: "35rem", margin: "15%" }}>
                                 <MDBCardTitle>{project.name}</MDBCardTitle>
-                            <MDBCardImage src={require(`../../assets/images/projects/${i}.png`).default} style={{ width: '22rem' }} waves />
+                            <MDBCardImage src={require(`../../assets/projects/${i}.png`).default} style={{ width: '22rem' }} waves />
                             <MDBCardBody>
                                 <MDBCardText>
                                     {project.description}
