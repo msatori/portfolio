@@ -1,9 +1,10 @@
 $teal: #1ec1c8;
 $pale-yellow: #f2e385;
 $heading:  'Special Elite', cursive;
+$text: 'Viaoda Libre', cursive;
 //font imports
 @import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Viaoda+Libre&display=swap');
 body {
     margin: 0;
 }
@@ -84,22 +85,37 @@ body {
     }
 
     &-content {
-        padding-top: 10%;
+        padding-top: 6%;
         text-align: center;
     }
 
     &-heading {
         font-family: $heading;
+        font-size: 25pt;
         color: #fff;
+    }
+
+    h1 {
+        font-size: 40pt;
+        color: #dab140;
     }
 
     a {
         color: #ffff;
         text-decoration: none;
-
+        font-family: $text;
+        
         &:hover {
             animation: neon 1.5s ease-in-out infinite alternate;
         }
+    }
+    
+    #email {
+        font-size: 20pt;
+    }
+
+    .icon {
+        margin: 2%;
     }
 }
 
