@@ -2,7 +2,8 @@ import { React } from 'react';
 import {
     Link
 } from "react-router-dom";
-import { MDBCol, MDBRow, } from 'mdb-react-ui-kit';
+import { MDBCol, MDBRow, MDBNavbar, MDBNavbarBrand, MDBNavbarNav, MDBNavItem, MDBNavLink, MDBNavbarToggler, MDBCollapse, MDBContainer,
+    MDBIcon } from 'mdb-react-ui-kit';
 import logo from '../../assets/images/splash-test.png';
 export default function HomePage() {
     const pages = [
@@ -23,10 +24,12 @@ export default function HomePage() {
     return (
         <section className="hero d-flex justify-content-center">
             <div className="hero-wrapper">
-                <div className="text-center">
-
-                    <img className='img-fluid hero-img' src={logo} alt='Maya Santiago Logo' />
-
+                <div className="hero-text t-bg">
+                    <h1>Hello Universe,
+                        <br />
+                        I'm Maya.
+                    </h1>
+                    <p>A midwest-based web developer with a passion for design.</p>
                     <div className="hero-btns">
                         <ul>
                             {pages.map((page) => (

@@ -2,53 +2,43 @@
 @import url("https://fonts.googleapis.com/css2?family=Viaoda+Libre&display=swap");
 body {
   margin: 0;
+  background-color: black;
 }
 
 .hero {
-  height: 100vh;
-}
-
-.hero-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  height: 100%;
-}
-
-.hero-img {
-  padding-left: 20%;
-}
-
-.hero-btns {
   text-align: center;
-  margin-bottom: 5%;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  width: 100%;
+  height: 90vh;
+}
+
+.hero-text {
+  background-image: url("./assets/images/pearl.png");
+  background-repeat: repeat;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Special Elite", cursive;
+}
+
+.hero h1 {
+  font-size: 15vh;
+  line-height: 1.5;
+}
+
+.hero p {
+  font-size: 5vh;
 }
 
 .hero-btn {
-  margin: 30pt;
-  list-style: none;
+  padding: 2%;
   display: inline;
-  font-family: "Special Elite", cursive;
-  padding: 10pt 15pt 10pt 15pt;
-  width: 100pt;
-}
-
-.hero-btn a {
-  color: #083146;
-  text-decoration: none;
-  font-size: 20pt;
-}
-
-.hero-btn:hover {
-  -webkit-animation: neon 1.5s ease-in-out infinite alternate;
-          animation: neon 1.5s ease-in-out infinite alternate;
+  font-size: 3vh;
 }
 
 .resume {
@@ -60,7 +50,6 @@ body {
           justify-content: center;
   -ms-flex-line-pack: center;
       align-content: center;
-  background-image: url("./assets/images/blue-wc.jpg");
   background-size: 100%;
 }
 
@@ -81,7 +70,6 @@ body {
 
 .contact .container {
   height: 100vh;
-  background-image: url("./assets/images/blue-block.jpg");
   background-size: 90%;
   background-position: center;
   background-repeat: no-repeat;
@@ -151,9 +139,49 @@ body {
   }
 }
 
-@media (max-width: 768px) {
-  .card {
-    width: 100vw;
+@-webkit-keyframes slideIn {
+  0% {
+    -webkit-transform: translateX(-2%);
+            transform: translateX(-2%);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    -webkit-transform: translateX(-2%);
+            transform: translateX(-2%);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@-webkit-keyframes slideOut {
+  0% {
+    width: 95%;
+  }
+  100% {
+    width: 90%;
+  }
+}
+
+@keyframes slideOut {
+  0% {
+    width: 95%;
+  }
+  100% {
+    width: 90%;
+  }
+}
+
+@media (min-width: 1270px) {
+  .contact-container {
+    background-size: 100%;
   }
 }
 
@@ -164,8 +192,14 @@ body {
 }
 
 @media (max-width: 450px) {
-  .hero-img {
-    height: 350px;
+  .hero h1 {
+    font-size: 10vh;
+  }
+  .hero-btns {
+    font-size: 5vh;
+  }
+  .hero-btn {
+    display: list-item;
   }
 }
 /*# sourceMappingURL=index.css.map */
