@@ -1,5 +1,5 @@
 import { React, useState } from 'react';
-import { MDBBtn, MDBCard, MDBCardBody, MDBCardImage, MDBCardFooter, MDBCardTitle, MDBCardText, MDBRow, MDBCol, MDBView, MDBCardGroup } from 'mdb-react-ui-kit';
+import { Card, CardDeck, Row, Col } from 'react-bootstrap';
 
 export default function Resume() {
 
@@ -37,36 +37,22 @@ export default function Resume() {
     return (
         <section className="resume">
 
-            {/* <CardGroup>
+            <CardDeck>
+                <Row>
                     {projects.map((project, i) => (
-                        <Card key={project.name} style={{ maxWidth: "18rem" }}>
-                            <Card.Img src={require(`../../assets/images/projects/${i}.png`).default} style={{ maxWidth: "18rem" }} />
-                            <Card.Body>
-                                <Card.Text>{project.description}</Card.Text>
-                            </Card.Body>
-                        </Card>
-                    ))}
-                </CardGroup> */}
-            <MDBCardGroup>
-                {projects.map((project, i) => (
-               
-                        <MDBCard style={{ width: "35rem", margin: "15%" }}>
-                                <MDBCardTitle>{project.name}</MDBCardTitle>
-                            <MDBCardImage src={require(`../../assets/projects/${i}.png`).default} style={{ width: '22rem' }} waves />
-                            <MDBCardBody>
-                                <MDBCardText>
-                                    {project.description}
-                                </MDBCardText>
-                                <MDBBtn href={project.deployUrl}>Visit Site</MDBBtn>
-                                <br />
-                                <MDBBtn href={project.gitUrl}>Visit GitHub Repository</MDBBtn>
-                            </MDBCardBody>
-                        </MDBCard>
-                  
-                ))}
-            </MDBCardGroup>
-
-
+                        <Col xs={12} md={6} key={project.name}>
+                            <Card  >
+                                <div className='mask'>
+                                    <Card.Img src={require(`../../assets/projects/${i}.png`).default} />
+                                    <Card.Body>
+                                        <Card.Text>{project.description}</Card.Text>
+                                    </Card.Body>
+                                </div>
+                            </Card>
+                        </Col>
+                    ))};
+                </Row>
+            </CardDeck>
         </section>
 
 

@@ -1,8 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Special+Elite&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Viaoda+Libre&display=swap");
-body {
-  margin: 0;
+main {
   background-color: black;
+}
+
+html {
+  margin: 0;
 }
 
 .hero {
@@ -13,6 +16,7 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   text-align: center;
+  padding: 5%;
   height: 90vh;
 }
 
@@ -35,32 +39,38 @@ body {
   font-size: 5vh;
 }
 
+.hero-btns {
+  padding: 1%;
+}
+
 .hero-btn {
   padding: 2%;
   display: inline;
   font-size: 3vh;
+  list-style: none;
 }
 
-.resume {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+.hero .contact-icons {
+  float: left;
+  z-index: 9999;
+  margin-bottom: 20%;
+}
+
+.resume .card-deck {
+  text-align: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  background-size: 100%;
-}
-
-.resume .card-group {
-  text-align: center;
-  margin-right: 3%;
 }
 
 .resume .card {
+  min-width: 30vw;
+  padding: 4%;
+  height: 100%;
+  background-image: url("./assets/images/frost-pearl.png");
   border-radius: 15px;
-  padding: 3%;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .resume .card-title {
@@ -68,12 +78,24 @@ body {
   font-size: 25pt;
 }
 
+.resume .mask {
+  -webkit-animation: neon 1.5s ease-in-out infinite alternate;
+          animation: neon 1.5s ease-in-out infinite alternate;
+  height: 100%;
+}
+
+.resume .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: wrap;
+          flex-direction: wrap;
+}
+
 .contact .container {
   height: 100vh;
-  background-size: 90%;
-  background-position: center;
-  background-repeat: no-repeat;
-  padding: 3%;
 }
 
 .contact-content {
@@ -84,7 +106,12 @@ body {
 .contact-heading {
   font-family: "Special Elite", cursive;
   font-size: 25pt;
-  color: #fff;
+  background-image: url("./assets/images/pearl.png");
+  background-repeat: repeat;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-font-smoothing: antialiased;
 }
 
 .contact h1 {
@@ -109,16 +136,6 @@ body {
 
 .contact .icon {
   margin: 2%;
-}
-
-@supports ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
-  .card {
-    -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);
-  }
-  .card:hover {
-    background-color: rgba(155, 167, 235, 0.486);
-  }
 }
 
 @-webkit-keyframes neon {
@@ -176,18 +193,6 @@ body {
   }
   100% {
     width: 90%;
-  }
-}
-
-@media (min-width: 1270px) {
-  .contact-container {
-    background-size: 100%;
-  }
-}
-
-@media (min-width: 360px) and (max-width: 660px) {
-  .hero-img {
-    padding-left: 8%;
   }
 }
 

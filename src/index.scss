@@ -2,64 +2,27 @@ $teal: #1ec1c8;
 $pale-yellow: #f2e385;
 $heading:  'Special Elite', cursive;
 $text: 'Viaoda Libre', cursive;
+//@import "~bootstrap/scss/bootstrap";
+
 //font imports
 @import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Viaoda+Libre&display=swap');
-body {
-    margin: 0;
+main {
     background-color: black;
 }
-// .hero {
-//     height: 100vh;
-    
-//     &-wrapper {
-//         display: flex;
-//         justify-content: center;
-//         height: 100%;
-//     }
-    
-//     &-img {
-//         padding-left: 20%;
-       
-//     }
- 
-//     &-btns {
-//         text-align: center;
-     
-//         margin-bottom: 5%;
-//         justify-content: center;
-//         width: 100%;
-//     }
-    
-//     &-btn {
-//         margin: 30pt;
-//         list-style: none;
-//         display: inline;
-//         font-family: $heading;
-//         padding: 10pt 15pt 10pt 15pt;
-//         width: 100pt;
-//       a {
-//           color: #083146;
-//           text-decoration: none;
-//           font-size: 20pt;
-          
-//         }
-//         &:hover {
-//             animation: neon 1.5s ease-in-out infinite alternate;
-//         }
-//     }
-  
-// }
+
+html {
+    margin: 0;
+}
 
 .hero {
     display: flex;
     justify-content: center;
     text-align: center;
-  
+    padding: 5%;
     height: 90vh;
     
     &-text {
-        //padding-top: 25%;
         background-image: url('./assets/images/pearl.png');
         background-repeat: repeat;
         background-clip: text;
@@ -77,46 +40,64 @@ body {
     p {
         font-size: 5vh;
     }
+    &-btns {
+        padding: 1%;
+
+    }
     &-btn {
         padding: 2%;
         display: inline;
         font-size: 3vh;
+        list-style: none;
        
+    }
+
+    .contact-icons {
+        float: left;
+        z-index: 9999;
+        margin-bottom: 20%;
     }
 }
 
 .resume {
-    display: flex;
-    justify-content: center;
-    align-content: center;
-  //  background-image: url('./assets/images/blue-wc.jpg');
-    background-size: 100%;
-    
-    .card-group {
+  
+    .card-deck {
         text-align: center;
-        margin-right: 3%; 
-
-    };
- 
-    .card {
-        border-radius: 15px;
-        padding: 3%;
+        justify-content: center;
     }
-
+  
+    .card {
+        min-width: 30vw;
+        padding: 4%;
+        height: 100%;
+        background-image: url('./assets/images/frost-pearl.png');
+        border-radius: 15px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        
+    }
+    
+    
     .card-title {
         font-family: $heading;
         font-size: 25pt;
+    }
+    
+    .mask {
+        animation: neon 1.5s ease-in-out infinite alternate;
+        height: 100%;
+        
+    }
+    
+    .row {
+        display: flex;
+        flex-direction: wrap;
     }
 }
 
 .contact {
     .container {
        height: 100vh;
-      //  background-image: url('./assets/images/blue-block.jpg');
-        background-size: 90%;
-        background-position: center;
-        background-repeat: no-repeat;
-        padding: 3%;
     }
 
     &-content {
@@ -127,7 +108,12 @@ body {
     &-heading {
         font-family: $heading;
         font-size: 25pt;
-        color: #fff;
+        background-image: url('./assets/images/pearl.png');
+        background-repeat: repeat;
+        background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            -webkit-font-smoothing: antialiased;
     }
 
     h1 {
@@ -144,6 +130,8 @@ body {
             animation: neon 1.5s ease-in-out infinite alternate;
         }
     }
+
+    
     
     #email {
         font-size: 20pt;
@@ -153,19 +141,6 @@ body {
         margin: 2%;
     }
 }
-
-@supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
-    .card {
-      -webkit-backdrop-filter: blur(10px);
-      backdrop-filter: blur(10px);
-      
-      &:hover {
-            background-color: rgba(155, 167, 235, 0.486);  
-        }
-    }
-
-  }
-
 
 @keyframes neon {
     from {
@@ -206,21 +181,6 @@ body {
     }
 }
 //media queries
-@media(min-width: 1270px ) {
-   .contact {
-       &-container {
-          background-size: 100%;
-       }
-   }
-}
-
-@media(min-width: 360px ) and (max-width: 660px ) {
-    .hero {
-        &-img {
-            padding-left: 8%;
-        }
-    }
-}
 @media (max-width: 450px) {
    .hero {
        h1 {

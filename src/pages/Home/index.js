@@ -4,7 +4,12 @@ import {
 } from "react-router-dom";
 import { MDBCol, MDBRow, MDBNavbar, MDBNavbarBrand, MDBNavbarNav, MDBNavItem, MDBNavLink, MDBNavbarToggler, MDBCollapse, MDBContainer,
     MDBIcon } from 'mdb-react-ui-kit';
+import  {Fab} from '@material-ui/core'
 import logo from '../../assets/images/splash-test.png';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+
+import Resume from '../Resume';
 export default function HomePage() {
     const pages = [
         {
@@ -22,6 +27,7 @@ export default function HomePage() {
     ];
 
     return (
+        <div>
         <section className="hero d-flex justify-content-center">
             <div className="hero-wrapper">
                 <div className="hero-text t-bg">
@@ -30,6 +36,7 @@ export default function HomePage() {
                         I'm Maya.
                     </h1>
                     <p>A midwest-based web developer with a passion for design.</p>
+              
                     <div className="hero-btns">
                         <ul>
                             {pages.map((page) => (
@@ -41,7 +48,8 @@ export default function HomePage() {
                     </div>
                 </div>
             </div>
-
         </section>
+        <Resume />
+        </div>
     )
 }
