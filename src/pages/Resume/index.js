@@ -40,7 +40,7 @@ export default function Resume() {
             <CardDeck>
                 <Row>
                     {projects.map((project, i) => (
-                        <Col xs={12} md={6} key={project.name}>
+                        <Col xs={12} md={6} lg={2}key={project.name}>
                             <Card  >
                                 <div className='mask'>
                                     <Card.Img src={require(`../../assets/projects/${i}.png`).default} />

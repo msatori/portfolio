@@ -58,19 +58,11 @@ html {
 
 .resume .card-deck {
   text-align: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
 }
 
 .resume .card {
-  min-width: 30vw;
   padding: 4%;
-  height: 100%;
-  background-image: url("./assets/images/frost-pearl.png");
   border-radius: 15px;
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
 .resume .card-title {
@@ -78,20 +70,66 @@ html {
   font-size: 25pt;
 }
 
-.resume .mask {
-  -webkit-animation: neon 1.5s ease-in-out infinite alternate;
-          animation: neon 1.5s ease-in-out infinite alternate;
-  height: 100%;
-}
-
-.resume .row {
+.resume .card-body {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: wrap;
-          flex-direction: wrap;
+  -webkit-transform: translateY(-100px);
+          transform: translateY(-100px);
+}
+
+.resume .card-img {
+  position: relative;
+  z-index: 1;
+  -webkit-transform: translateY(100px);
+          transform: translateY(100px);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  -webkit-animation: neon 1.5s ease-in-out infinite alternate;
+          animation: neon 1.5s ease-in-out infinite alternate;
+}
+
+.resume .card .mask {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  -webkit-transition: 4ms;
+  transition: 4ms;
+}
+
+.resume .card:hover .card-img {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  -webkit-box-shadow: inset 0 0 60px whitesmoke, inset 20px 0 80px #f0f, inset -20px 0 80px #0ff, inset 20px 0 300px #f0f, inset -20px 0 300px #0ff, 0 0 50px #fff, -10px 0 80px #f0f, 10px 0 80px #0ff;
+          box-shadow: inset 0 0 60px whitesmoke, inset 20px 0 80px #f0f, inset -20px 0 80px #0ff, inset 20px 0 300px #f0f, inset -20px 0 300px #0ff, 0 0 50px #fff, -10px 0 80px #f0f, 10px 0 80px #0ff;
+}
+
+.resume .card:hover .card-body {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+.row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .contact .container {
@@ -140,19 +178,23 @@ html {
 
 @-webkit-keyframes neon {
   from {
-    text-shadow: 0 0 6px rgba(172, 206, 221, 0.92), 0 0 30px rgba(50, 189, 199, 0.34), 0 0 12px rgba(16, 130, 165, 0.52), 0 0 21px rgba(30, 200, 242, 0.92), 0 0 34px rgba(30, 242, 224, 0.78), 0 0 54px rgba(30, 182, 242, 0.92);
+    -webkit-box-shadow: 0 0 6px rgba(172, 206, 221, 0.92), 0 0 30px rgba(50, 189, 199, 0.34), 0 0 12px rgba(16, 130, 165, 0.52), 0 0 21px rgba(30, 200, 242, 0.92), 0 0 34px rgba(30, 242, 224, 0.78), 0 0 54px rgba(30, 182, 242, 0.92);
+            box-shadow: 0 0 6px rgba(172, 206, 221, 0.92), 0 0 30px rgba(50, 189, 199, 0.34), 0 0 12px rgba(16, 130, 165, 0.52), 0 0 21px rgba(30, 200, 242, 0.92), 0 0 34px rgba(30, 242, 224, 0.78), 0 0 54px rgba(30, 182, 242, 0.92);
   }
   to {
-    text-shadow: 0 0 6px rgba(202, 228, 224, 0.98), 0 0 30px rgba(202, 226, 228, 0.42), 0 0 12px rgba(203, 206, 64, 0.58), 0 0 22px rgba(30, 44, 242, 0.84), 0 0 38px rgba(95, 97, 185, 0.88), 0 0 60px #451ef2;
+    -webkit-box-shadow: 0 0 6px rgba(202, 228, 224, 0.98), 0 0 30px rgba(202, 226, 228, 0.42), 0 0 12px rgba(203, 206, 64, 0.58), 0 0 22px rgba(30, 44, 242, 0.84), 0 0 38px rgba(95, 97, 185, 0.88), 0 0 60px #451ef2;
+            box-shadow: 0 0 6px rgba(202, 228, 224, 0.98), 0 0 30px rgba(202, 226, 228, 0.42), 0 0 12px rgba(203, 206, 64, 0.58), 0 0 22px rgba(30, 44, 242, 0.84), 0 0 38px rgba(95, 97, 185, 0.88), 0 0 60px #451ef2;
   }
 }
 
 @keyframes neon {
   from {
-    text-shadow: 0 0 6px rgba(172, 206, 221, 0.92), 0 0 30px rgba(50, 189, 199, 0.34), 0 0 12px rgba(16, 130, 165, 0.52), 0 0 21px rgba(30, 200, 242, 0.92), 0 0 34px rgba(30, 242, 224, 0.78), 0 0 54px rgba(30, 182, 242, 0.92);
+    -webkit-box-shadow: 0 0 6px rgba(172, 206, 221, 0.92), 0 0 30px rgba(50, 189, 199, 0.34), 0 0 12px rgba(16, 130, 165, 0.52), 0 0 21px rgba(30, 200, 242, 0.92), 0 0 34px rgba(30, 242, 224, 0.78), 0 0 54px rgba(30, 182, 242, 0.92);
+            box-shadow: 0 0 6px rgba(172, 206, 221, 0.92), 0 0 30px rgba(50, 189, 199, 0.34), 0 0 12px rgba(16, 130, 165, 0.52), 0 0 21px rgba(30, 200, 242, 0.92), 0 0 34px rgba(30, 242, 224, 0.78), 0 0 54px rgba(30, 182, 242, 0.92);
   }
   to {
-    text-shadow: 0 0 6px rgba(202, 228, 224, 0.98), 0 0 30px rgba(202, 226, 228, 0.42), 0 0 12px rgba(203, 206, 64, 0.58), 0 0 22px rgba(30, 44, 242, 0.84), 0 0 38px rgba(95, 97, 185, 0.88), 0 0 60px #451ef2;
+    -webkit-box-shadow: 0 0 6px rgba(202, 228, 224, 0.98), 0 0 30px rgba(202, 226, 228, 0.42), 0 0 12px rgba(203, 206, 64, 0.58), 0 0 22px rgba(30, 44, 242, 0.84), 0 0 38px rgba(95, 97, 185, 0.88), 0 0 60px #451ef2;
+            box-shadow: 0 0 6px rgba(202, 228, 224, 0.98), 0 0 30px rgba(202, 226, 228, 0.42), 0 0 12px rgba(203, 206, 64, 0.58), 0 0 22px rgba(30, 44, 242, 0.84), 0 0 38px rgba(95, 97, 185, 0.88), 0 0 60px #451ef2;
   }
 }
 
