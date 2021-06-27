@@ -1,5 +1,5 @@
 import { React, useState } from 'react';
-import { Card, CardDeck, Row, Col } from 'react-bootstrap';
+import { Card, CardDeck, Row, Col, } from 'react-bootstrap';
 
 export default function Resume() {
 
@@ -40,13 +40,19 @@ export default function Resume() {
             <CardDeck>
                 <Row>
                     {projects.map((project, i) => (
-                        <Col xs={12} md={6} lg={2}key={project.name}>
-                            <Card  >
+                        <Col xs={12} md={6} lg={2} key={project.name}>
+                            <Card>
                                 <div className='mask'>
-                                    <Card.Img src={require(`../../assets/projects/${i}.png`).default} />
-                                    <Card.Body>
-                                        <Card.Text>{project.description}</Card.Text>
-                                    </Card.Body>
+                                    <div className='top'>
+                                        <Card.Img src={require(`../../assets/projects/${i}.png`).default} />
+                                    </div>
+                                    <div className='bottom'>
+                                        <Card.ImgOverlay>
+                                            <Card.Body>
+                                                <Card.Text>{project.description}</Card.Text>
+                                            </Card.Body>
+                                        </Card.ImgOverlay>
+                                    </div>
                                 </div>
                             </Card>
                         </Col>
