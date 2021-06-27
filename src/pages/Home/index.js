@@ -37,13 +37,13 @@ export default function HomePage() {
                         <p>A midwest-based web developer with a passion for design.</p>
 
                         <div className="hero-btns">
-                            <ul>
+                            {/* <ul>
                                 {pages.map((page) => (
                                     <li className="hero-btn" key={page.name}>
                                         <Link to={page.link} >{page.name}</Link>
                                     </li>
                                 ))}
-                            </ul>
+                            </ul> */}
                         </div>
                     </div>
                 </div>
