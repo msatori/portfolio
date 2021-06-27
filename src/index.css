@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Special+Elite&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Viaoda+Libre&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap");
 main {
   background-color: black;
 }
@@ -57,7 +57,7 @@ html {
 }
 
 .resume {
-  height: 100vh;
+  height: 60vh;
 }
 
 .resume .card-deck {
@@ -69,26 +69,27 @@ html {
   background-color: black;
 }
 
-.resume .card-title {
-  font-family: "Special Elite", cursive;
-  font-size: 25pt;
-}
-
 .resume .card .top {
   position: relative;
   z-index: 1;
-  -webkit-transform: translateY(100px);
-          transform: translateY(100px);
+  -webkit-transform: translateY(80px);
+          transform: translateY(80px);
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.resume .card-title {
+  font-family: "Special Elite", cursive;
+  color: white;
+  padding: 2%;
 }
 
 .resume .card .bottom {
@@ -97,10 +98,10 @@ html {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-transform: translateY(-50px);
-          transform: translateY(-50px);
-  -webkit-transition: .5s;
-  transition: .5s;
+  -webkit-transform: translateY(-90px);
+          transform: translateY(-90px);
+  -webkit-transition: .2s;
+  transition: .2s;
 }
 
 .resume .card-body {
@@ -111,29 +112,71 @@ html {
   height: 100%;
 }
 
+.resume .card-btn {
+  background-image: url("./assets/images/pearl.png");
+  border: none;
+  border-radius: 15px;
+  font-family: "Special Elite", cursive;
+  margin: 1%;
+  padding: 2%;
+}
+
+.resume .card-btn:hover, .resume .card-btn:active {
+  color: white;
+}
+
+.resume .card-text {
+  font-family: "Roboto Mono", monospace;
+}
+
 .resume .card .mask {
   -webkit-transition: .4ms;
   transition: .4ms;
+  border-radius: 15px;
 }
 
-.resume .card:hover .top, .resume .card:active .top, .resume .card:focus .top {
-  -webkit-transform: translateY(0);
-          transform: translateY(0);
+.bio {
+  height: auto;
+  background-image: url("./assets/images/prism2.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin: 3%;
+  padding: 3%;
+  text-align: center;
+  border-radius: 15px;
 }
 
-.resume .card:hover .bottom, .resume .card:active .bottom, .resume .card:focus .bottom {
-  -webkit-transform: translateY(4%);
-          transform: translateY(4%);
-  visibility: visible;
+.bio-wrapper {
+  overflow: auto;
+  border: 8px black solid;
+  border-radius: 15px;
+  padding: 2%;
 }
 
-.resume .card:hover .mask, .resume .card:active .mask, .resume .card:focus .mask {
-  -webkit-animation: neon 1.5s ease-in-out infinite alternate;
-          animation: neon 1.5s ease-in-out infinite alternate;
+.bio-text {
+  font-family: "Roboto Mono", monospace;
+  font-weight: 900;
+}
+
+.bio li {
+  list-style: none;
+}
+
+.contact {
+  background-image: url("./assets/images/prism2.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin: 3%;
+  padding: 3%;
+  border-radius: 15px;
+  height: 40vh;
 }
 
 .contact .container {
-  height: 100vh;
+  border: 10px solid black;
+  border-radius: 15px;
 }
 
 .contact-content {
@@ -143,24 +186,18 @@ html {
 
 .contact-heading {
   font-family: "Special Elite", cursive;
-  font-size: 25pt;
-  background-image: url("./assets/images/pearl.png");
-  background-repeat: repeat;
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -webkit-font-smoothing: antialiased;
+  font-size: 20pt;
 }
 
 .contact h1 {
-  font-size: 40pt;
+  font-size: 30pt;
   color: #dab140;
 }
 
 .contact a {
   color: #ffff;
   text-decoration: none;
-  font-family: "Viaoda Libre", cursive;
+  font-family: "Roboto Mono", monospace;
 }
 
 .contact a:hover {
@@ -169,7 +206,7 @@ html {
 }
 
 .contact #email {
-  font-size: 20pt;
+  font-size: 16pt;
 }
 
 .contact .icon {
@@ -178,67 +215,43 @@ html {
 
 @-webkit-keyframes neon {
   from {
-    -webkit-box-shadow: 0 0 6px rgba(172, 206, 221, 0.92), 0 0 30px rgba(50, 189, 199, 0.34), 0 0 12px rgba(16, 130, 165, 0.52), 0 0 21px rgba(30, 200, 242, 0.92), 0 0 34px rgba(30, 242, 224, 0.78), 0 0 54px rgba(30, 182, 242, 0.92);
-            box-shadow: 0 0 6px rgba(172, 206, 221, 0.92), 0 0 30px rgba(50, 189, 199, 0.34), 0 0 12px rgba(16, 130, 165, 0.52), 0 0 21px rgba(30, 200, 242, 0.92), 0 0 34px rgba(30, 242, 224, 0.78), 0 0 54px rgba(30, 182, 242, 0.92);
+    -webkit-box-shadow: 0 0 6px rgba(172, 206, 221, 0.92), 0 0 30px rgba(50, 189, 199, 0.34), 0 0 12px rgba(16, 130, 165, 0.52), 0 0 21px rgba(207, 30, 242, 0.92), 0 0 34px rgba(30, 242, 224, 0.78), 0 0 54px rgba(30, 164, 242, 0.92);
+            box-shadow: 0 0 6px rgba(172, 206, 221, 0.92), 0 0 30px rgba(50, 189, 199, 0.34), 0 0 12px rgba(16, 130, 165, 0.52), 0 0 21px rgba(207, 30, 242, 0.92), 0 0 34px rgba(30, 242, 224, 0.78), 0 0 54px rgba(30, 164, 242, 0.92);
   }
   to {
-    -webkit-box-shadow: 0 0 6px rgba(202, 228, 224, 0.98), 0 0 30px rgba(202, 226, 228, 0.42), 0 0 12px rgba(203, 206, 64, 0.58), 0 0 22px rgba(30, 44, 242, 0.84), 0 0 38px rgba(95, 97, 185, 0.88), 0 0 60px #451ef2;
-            box-shadow: 0 0 6px rgba(202, 228, 224, 0.98), 0 0 30px rgba(202, 226, 228, 0.42), 0 0 12px rgba(203, 206, 64, 0.58), 0 0 22px rgba(30, 44, 242, 0.84), 0 0 38px rgba(95, 97, 185, 0.88), 0 0 60px #451ef2;
+    -webkit-box-shadow: 0 0 6px rgba(202, 228, 224, 0.98), 0 0 30px rgba(218, 202, 228, 0.42), 0 0 12px rgba(206, 64, 206, 0.58), 0 0 22px rgba(235, 30, 242, 0.84), 0 0 38px rgba(149, 95, 185, 0.88), 0 0 60px #6f1ef2;
+            box-shadow: 0 0 6px rgba(202, 228, 224, 0.98), 0 0 30px rgba(218, 202, 228, 0.42), 0 0 12px rgba(206, 64, 206, 0.58), 0 0 22px rgba(235, 30, 242, 0.84), 0 0 38px rgba(149, 95, 185, 0.88), 0 0 60px #6f1ef2;
   }
 }
 
 @keyframes neon {
   from {
-    -webkit-box-shadow: 0 0 6px rgba(172, 206, 221, 0.92), 0 0 30px rgba(50, 189, 199, 0.34), 0 0 12px rgba(16, 130, 165, 0.52), 0 0 21px rgba(30, 200, 242, 0.92), 0 0 34px rgba(30, 242, 224, 0.78), 0 0 54px rgba(30, 182, 242, 0.92);
-            box-shadow: 0 0 6px rgba(172, 206, 221, 0.92), 0 0 30px rgba(50, 189, 199, 0.34), 0 0 12px rgba(16, 130, 165, 0.52), 0 0 21px rgba(30, 200, 242, 0.92), 0 0 34px rgba(30, 242, 224, 0.78), 0 0 54px rgba(30, 182, 242, 0.92);
+    -webkit-box-shadow: 0 0 6px rgba(172, 206, 221, 0.92), 0 0 30px rgba(50, 189, 199, 0.34), 0 0 12px rgba(16, 130, 165, 0.52), 0 0 21px rgba(207, 30, 242, 0.92), 0 0 34px rgba(30, 242, 224, 0.78), 0 0 54px rgba(30, 164, 242, 0.92);
+            box-shadow: 0 0 6px rgba(172, 206, 221, 0.92), 0 0 30px rgba(50, 189, 199, 0.34), 0 0 12px rgba(16, 130, 165, 0.52), 0 0 21px rgba(207, 30, 242, 0.92), 0 0 34px rgba(30, 242, 224, 0.78), 0 0 54px rgba(30, 164, 242, 0.92);
   }
   to {
-    -webkit-box-shadow: 0 0 6px rgba(202, 228, 224, 0.98), 0 0 30px rgba(202, 226, 228, 0.42), 0 0 12px rgba(203, 206, 64, 0.58), 0 0 22px rgba(30, 44, 242, 0.84), 0 0 38px rgba(95, 97, 185, 0.88), 0 0 60px #451ef2;
-            box-shadow: 0 0 6px rgba(202, 228, 224, 0.98), 0 0 30px rgba(202, 226, 228, 0.42), 0 0 12px rgba(203, 206, 64, 0.58), 0 0 22px rgba(30, 44, 242, 0.84), 0 0 38px rgba(95, 97, 185, 0.88), 0 0 60px #451ef2;
+    -webkit-box-shadow: 0 0 6px rgba(202, 228, 224, 0.98), 0 0 30px rgba(218, 202, 228, 0.42), 0 0 12px rgba(206, 64, 206, 0.58), 0 0 22px rgba(235, 30, 242, 0.84), 0 0 38px rgba(149, 95, 185, 0.88), 0 0 60px #6f1ef2;
+            box-shadow: 0 0 6px rgba(202, 228, 224, 0.98), 0 0 30px rgba(218, 202, 228, 0.42), 0 0 12px rgba(206, 64, 206, 0.58), 0 0 22px rgba(235, 30, 242, 0.84), 0 0 38px rgba(149, 95, 185, 0.88), 0 0 60px #6f1ef2;
   }
 }
 
-@-webkit-keyframes slideIn {
-  0% {
-    -webkit-transform: translateX(-2%);
-            transform: translateX(-2%);
+@media (any-hover: hover) {
+  .card:hover .top {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
   }
-  100% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
+  .card:hover .bottom {
+    -webkit-transform: translateY(4%);
+            transform: translateY(4%);
+    visibility: visible;
   }
-}
-
-@keyframes slideIn {
-  0% {
-    -webkit-transform: translateX(-2%);
-            transform: translateX(-2%);
-  }
-  100% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
+  .card:hover .mask {
+    -webkit-animation: neon 1.5s ease-in-out infinite alternate;
+            animation: neon 1.5s ease-in-out infinite alternate;
   }
 }
 
-@-webkit-keyframes slideOut {
-  0% {
-    width: 95%;
-  }
-  100% {
-    width: 90%;
-  }
-}
-
-@keyframes slideOut {
-  0% {
-    width: 95%;
-  }
-  100% {
-    width: 90%;
-  }
-}
-
-@media (max-width: 450px) {
+@media (max-width: 770px) {
   .hero h1 {
     font-size: 10vh;
   }
@@ -249,10 +262,16 @@ html {
     display: list-item;
   }
   .resume {
-    height: 200vh;
+    height: auto;
   }
   .card {
-    margin-bottom: 3%;
+    margin-top: 10%;
+  }
+}
+
+@media (max-width: 600px) {
+  .card {
+    margin-top: 0;
   }
 }
 /*# sourceMappingURL=index.css.map */

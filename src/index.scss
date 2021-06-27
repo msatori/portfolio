@@ -1,12 +1,12 @@
 $teal: #1ec1c8;
 $pale-yellow: #f2e385;
 $heading:  'Special Elite', cursive;
-$text: 'Viaoda Libre', cursive;
+$text: 'Roboto Mono', monospace;
 //@import "~bootstrap/scss/bootstrap";
 
 //font imports
 @import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Viaoda+Libre&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
 main {
     background-color: black;
 }
@@ -61,7 +61,7 @@ html {
 
 .resume {
 
-    height: 100vh;
+    height: 60vh;
   
     .card-deck {
         text-align: center;    
@@ -72,82 +72,114 @@ html {
        // position: relative;
         padding: 0;
         background-color: black;
-
-        &-title {
-            font-family: $heading;
-            font-size: 25pt;
-        }
-
-       
+        
+        
         .top {
             position: relative;
             z-index: 1;
-            transform: translateY(100px);
+            transform: translateY(80px);
             justify-content: center;
-            align-content:center;
             align-items: center;
-            transition:  0.5s;
-          //  animation: neon 1.5s ease-in-out infinite alternate;  
+            transition:  0.3s;
+            align-content:center;
+           
+            
         }
-
+        &-title {
+            font-family: $heading;
+            color: white;
+            padding: 2%;
+        }
+        
         .bottom {
             visibility: hidden;
             position: relative;
             display: flex;
-            transform: translateY(-50px);
-            transition: .5s;
+            transform: translateY(-90px);
+            transition: .2s;
            
+            
         }
-
+        
         &-body {
-          color: white;
+            color: white;
+        }
+        
+        &-img {
+            height: 100%;
         }
 
-        &-img {
-           height: 100%;
+        &-btn {
+            background-image: url('./assets/images/pearl.png');
+            border: none;
+            border-radius: 15px;
+            font-family: $heading;
+            margin: 1%;
+            padding: 2%;
+
+            &:hover, &:active {
+                color: white;
+            }
+        }
+
+        &-text {
+            font-family: $text;
         }
         
         
         .mask {
           transition: .4ms;
+          border-radius: 15px;
             
         }
        
-            &:hover, &:active, &:focus{
-                .top {
-                    transform: translateY(0);
-                    // box-shadow:
-                    // inset 0 0 60px whitesmoke,
-                    // inset 20px 0 80px #f0f,
-                    // inset -20px 0 80px #0ff,
-                    // inset 20px 0 300px #f0f,
-                    // inset -20px 0 300px #0ff,
-                    // 0 0 50px #fff,
-                    // -10px 0 80px #f0f,
-                    // 10px 0 80px #0ff;
-                    // animation: none;
-                }
-
-                .bottom {
-                transform: translateY(4%);
-                visibility: visible;
-                }
-
-                .mask {
-                    animation: neon 1.5s ease-in-out infinite alternate;  
-
-                }
-                
-            }
     }
     
+}
+
+.bio {
+    height: auto;
+    background-image: url('./assets/images/prism2.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin: 3% ;
+    padding: 3%;
+    text-align: center;
+    border-radius: 15px;
+    
+    &-wrapper {
+        overflow: auto;
+        border: 8px black solid;
+        border-radius: 15px;
+        padding: 2%;
+    }
+
+    &-text {
+        font-family: $text;
+        font-weight: 900;
+    }
+
+ 
+    li {
+        list-style: none;
+    }
 }
     
 
 
 .contact {
+    background-image: url('./assets/images/prism2.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin: 3% ;
+    padding: 3%;
+    border-radius: 15px;
+    height: 40vh;
     .container {
-       height: 100vh;
+       border: 10px solid black;
+       border-radius: 15px;
     }
 
     &-content {
@@ -157,17 +189,12 @@ html {
 
     &-heading {
         font-family: $heading;
-        font-size: 25pt;
-        background-image: url('./assets/images/pearl.png');
-        background-repeat: repeat;
-        background-clip: text;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            -webkit-font-smoothing: antialiased;
+        font-size: 20pt;
+       
     }
 
     h1 {
-        font-size: 40pt;
+        font-size: 30pt;
         color: #dab140;
     }
 
@@ -184,7 +211,7 @@ html {
     
     
     #email {
-        font-size: 20pt;
+        font-size: 16pt;
     }
 
     .icon {
@@ -198,40 +225,46 @@ html {
         0 0 6px rgba(172, 206, 221, 0.92),
         0 0 30px rgba(50, 189, 199, 0.34),
         0 0 12px rgba(16, 130, 165, 0.52),
-        0 0 21px rgba(30, 200, 242, 0.92),
+        0 0 21px rgba(207, 30, 242, 0.92),
         0 0 34px rgba(30, 242, 224, 0.78),
-        0 0 54px rgba(30, 182, 242, 0.92);
+        0 0 54px rgba(30, 164, 242, 0.92);
       }
      to {
         box-shadow:
         0 0 6px rgba(202, 228, 224, 0.98),
-        0 0 30px rgba(202, 226, 228, 0.42),
-        0 0 12px rgba(203, 206, 64, 0.58),
-        0 0 22px rgba(30, 44, 242, 0.84),
-        0 0 38px rgba(95, 97, 185, 0.88),
-        0 0 60px rgb(69, 30, 242);
+        0 0 30px rgba(218, 202, 228, 0.42),
+        0 0 12px rgba(206, 64, 206, 0.58),
+        0 0 22px rgba(235, 30, 242, 0.84),
+        0 0 38px rgba(149, 95, 185, 0.88),
+        0 0 60px rgb(111, 30, 242);
       }
+      
 }
 
-@keyframes slideIn {
-    0% {
-        transform: translateX(-2%);
-    }
-    100% {
-        transform: translateX(0);
-    }
-}
+//touchscreen card hover 
+    @media (any-hover: hover) {
+       .card {
+           &:hover {
+        .top {
+            transform: translateY(0);
 
-@keyframes slideOut {
-    0% {
-        width: 95%;
+        }
+
+        .bottom {
+            transform: translateY(4%);
+            visibility: visible;
+        }
+        
+        .mask {
+            
+            animation: neon 1.5s ease-in-out infinite alternate;  
+        }
+      
+       }
     }
-    100% {
-        width: 90%;
-    }
-}
+      }
 //media queries
-@media (max-width: 450px) {
+@media (max-width: 770px) {
    .hero {
        h1 {
            font-size: 10vh;
@@ -246,10 +279,17 @@ html {
        }
    }
    .resume {
-       height: 200vh;
+       height: auto;
    }
    .card {
-     //  margin-top: 5%;
-       margin-bottom:3%
+       margin-top:10%
    }
+
+ 
+}
+
+@media (max-width: 600px) {
+    .card {
+        margin-top: 0;
+    }
 }

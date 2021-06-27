@@ -5,11 +5,13 @@ import {
 import { MDBCol, MDBRow, MDBNavbar, MDBNavbarBrand, MDBNavbarNav, MDBNavItem, MDBNavLink, MDBNavbarToggler, MDBCollapse, MDBContainer,
     MDBIcon } from 'mdb-react-ui-kit';
 import  {Fab} from '@material-ui/core'
-import logo from '../../assets/images/splash-test.png';
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
 import Resume from '../Resume';
+import Contact from '../Contact';
+import Bio from '../Bio';
 export default function HomePage() {
     const pages = [
         {
@@ -49,7 +51,9 @@ export default function HomePage() {
                 </div>
             </div>
         </section>
+        <Bio />
         <Resume />
+        <Contact />
         </div>
     )
 }

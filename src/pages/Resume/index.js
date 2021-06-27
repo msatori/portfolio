@@ -15,7 +15,7 @@ export default function Resume() {
         {
             name: "Budgie the Tracker",
             role: "Backend Developer",
-            description: "A simple expense tracking PWA that allows for online and offline usage. Frontend design provided by UW Madison Extended Bootcamp",
+            description: "A simple expense tracking PWA that allows for online and offline usage. ",
             deployUrl: "https://stark-bayou-63490.herokuapp.com/",
             gitUrl: "https://github.com/msatori/budgie-the-tracker"
         },
@@ -39,18 +39,19 @@ export default function Resume() {
             <Container fluid >
                 <CardDeck className='justify-content-center'>
                     <Row className='justify-content-center'>
-
-
                         {projects.map((project, i) => (
                             <Col xs={12} md={4} lg={4} xl={3} key={project.name}>
                                 <Card>
                                     <div className='mask'>
                                         <div className='top'>
+                                            <Card.Title>{project.name}</Card.Title>
                                             <Card.Img src={require(`../../assets/projects/${i}.png`).default} />
                                         </div>
                                         <div className='bottom'>
                                                <Card.Body>
                                                     <Card.Text>{project.description}</Card.Text>
+                                                    <button className='card-btn' href={project.deployUrl}>Visit Site</button>
+                                                    <button className='card-btn' href={project.gitUrl}>Visit GitHub Repository</button>
                                                 </Card.Body>
                                             
                                         </div>
