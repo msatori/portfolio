@@ -5,7 +5,7 @@ main {
 }
 
 html {
-  margin: 0;
+  background-color: black;
 }
 
 .hero {
@@ -50,14 +50,9 @@ html {
   list-style: none;
 }
 
-.hero .contact-icons {
-  float: left;
-  z-index: 9999;
-  margin-bottom: 20%;
-}
-
 .resume {
   height: 60vh;
+  padding: 3%;
 }
 
 .resume .card-deck {
@@ -148,7 +143,6 @@ html {
 }
 
 .bio-wrapper {
-  overflow: auto;
   border: 8px black solid;
   border-radius: 15px;
   padding: 2%;
@@ -157,6 +151,18 @@ html {
 .bio-text {
   font-family: "Roboto Mono", monospace;
   font-weight: 900;
+}
+
+.bio .resume-container {
+  margin: 4%;
+}
+
+.bio a {
+  font-family: "Special Elite", cursive;
+  color: black;
+  border: 5px solid black;
+  padding: 1%;
+  border-radius: 15px;
 }
 
 .bio li {
@@ -168,30 +174,21 @@ html {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  margin: 3%;
-  padding: 3%;
   border-radius: 15px;
-  height: 40vh;
-}
-
-.contact .container {
-  border: 10px solid black;
-  border-radius: 15px;
+  height: 45vh;
+  padding: 1%;
+  margin: 10vh 3% 5% 3%;
 }
 
 .contact-content {
+  border: 10px solid black;
+  border-radius: 15px;
   padding-top: 6%;
   text-align: center;
 }
 
 .contact-heading {
   font-family: "Special Elite", cursive;
-  font-size: 20pt;
-}
-
-.contact h1 {
-  font-size: 30pt;
-  color: #dab140;
 }
 
 .contact a {
@@ -203,10 +200,6 @@ html {
 .contact a:hover {
   -webkit-animation: neon 1.5s ease-in-out infinite alternate;
           animation: neon 1.5s ease-in-out infinite alternate;
-}
-
-.contact #email {
-  font-size: 16pt;
 }
 
 .contact .icon {

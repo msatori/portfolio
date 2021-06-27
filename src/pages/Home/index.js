@@ -1,14 +1,11 @@
+//utility imports
 import { React } from 'react';
 import {
     Link
 } from "react-router-dom";
-import { MDBCol, MDBRow, MDBNavbar, MDBNavbarBrand, MDBNavbarNav, MDBNavItem, MDBNavLink, MDBNavbarToggler, MDBCollapse, MDBContainer,
-    MDBIcon } from 'mdb-react-ui-kit';
-import  {Fab} from '@material-ui/core'
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
-
+import { Fab } from '@material-ui/core'
+//component imports
 import Resume from '../Resume';
 import Contact from '../Contact';
 import Bio from '../Bio';
@@ -30,30 +27,30 @@ export default function HomePage() {
 
     return (
         <div>
-        <section className="hero d-flex justify-content-center">
-            <div className="hero-wrapper">
-                <div className="hero-text t-bg">
-                    <h1>Hello Universe,
-                        <br />
-                        I'm Maya.
-                    </h1>
-                    <p>A midwest-based web developer with a passion for design.</p>
-              
-                    <div className="hero-btns">
-                        <ul>
-                            {pages.map((page) => (
-                                <li className="hero-btn" key={page.name}>
-                                    <Link to={page.link} >{page.name}</Link>
-                                </li>
-                            ))}
-                        </ul>
+            <section className="hero d-flex justify-content-center">
+                <div className="hero-wrapper">
+                    <div className="hero-text t-bg">
+                        <h1>Hello Universe,
+                            <br />
+                            I'm Maya.
+                        </h1>
+                        <p>A midwest-based web developer with a passion for design.</p>
+
+                        <div className="hero-btns">
+                            <ul>
+                                {pages.map((page) => (
+                                    <li className="hero-btn" key={page.name}>
+                                        <Link to={page.link} >{page.name}</Link>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </section>
-        <Bio />
-        <Resume />
-        <Contact />
+            </section>
+            <Bio />
+            <Resume />
+            <Contact />
         </div>
     )
 }
