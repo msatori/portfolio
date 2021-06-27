@@ -1,5 +1,5 @@
 import { React, useState } from 'react';
-import { Card, CardDeck, Row, Col, } from 'react-bootstrap';
+import { Card, CardDeck, Row, Col, Container } from 'react-bootstrap';
 
 export default function Resume() {
 
@@ -36,29 +36,31 @@ export default function Resume() {
     ]);
     return (
         <section className="resume">
+            <Container fluid >
+                <CardDeck className='justify-content-center'>
+                    <Row className='justify-content-center'>
 
-            <CardDeck>
-                <Row>
-                    {projects.map((project, i) => (
-                        <Col xs={12} md={6} lg={2} key={project.name}>
-                            <Card>
-                                <div className='mask'>
-                                    <div className='top'>
-                                        <Card.Img src={require(`../../assets/projects/${i}.png`).default} />
+
+                        {projects.map((project, i) => (
+                            <Col xs={12} md={4} lg={4} xl={3} key={project.name}>
+                                <Card>
+                                    <div className='mask'>
+                                        <div className='top'>
+                                            <Card.Img src={require(`../../assets/projects/${i}.png`).default} />
+                                        </div>
+                                        <div className='bottom'>
+                                               <Card.Body>
+                                                    <Card.Text>{project.description}</Card.Text>
+                                                </Card.Body>
+                                            
+                                        </div>
                                     </div>
-                                    <div className='bottom'>
-                                        <Card.ImgOverlay>
-                                            <Card.Body>
-                                                <Card.Text>{project.description}</Card.Text>
-                                            </Card.Body>
-                                        </Card.ImgOverlay>
-                                    </div>
-                                </div>
-                            </Card>
-                        </Col>
-                    ))};
-                </Row>
-            </CardDeck>
+                                </Card>
+                            </Col>
+                        ))};
+                    </Row>
+                </CardDeck>
+            </Container>
         </section>
 
 
