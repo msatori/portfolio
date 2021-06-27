@@ -48,8 +48,11 @@ export default function HomePage() {
                     </div>
                 </div>
             </section>
+            <br />
             <Bio />
+            <br />
             <Resume />
+            <br />
             <Contact />
         </div>
     )

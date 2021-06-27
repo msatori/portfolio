@@ -38,9 +38,9 @@ export default function Resume() {
         <section className="resume">
             <Container fluid >
                 <CardDeck className='justify-content-center'>
-                    <Row className='justify-content-center'>
+                    <Row>
                         {projects.map((project, i) => (
-                            <Col xs={12} md={4} lg={4} xl={3} key={project.name}>
+                            <Col xs={12} md={6} lg={6} xl={3} key={project.name}>
                                 <Card>
                                     <div className='mask'>
                                         <div className='top'>
@@ -49,7 +49,11 @@ export default function Resume() {
                                         </div>
                                         <div className='bottom'>
                                                <Card.Body>
-                                                    <Card.Text>{project.description}</Card.Text>
+                                                    <Card.Text>
+                                                        {project.description}
+                                                        <br/>
+                                                        {project.role}
+                                                        </Card.Text>
                                                     <button className='card-btn' href={project.deployUrl}>Visit Site</button>
                                                     <button className='card-btn' href={project.gitUrl}>Visit GitHub Repository</button>
                                                 </Card.Body>
