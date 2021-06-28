@@ -17,7 +17,7 @@ html {
           justify-content: center;
   text-align: center;
   padding: 5%;
-  height: 90vh;
+  height: 100vh;
 }
 
 .hero-text {
@@ -67,7 +67,7 @@ html {
           justify-content: center;
   -ms-flex-line-pack: center;
       align-content: center;
-  padding-top: 4%;
+  padding: 4%;
   height: auto;
 }
 
@@ -328,16 +328,16 @@ html {
 }
 
 @media (any-hover: hover) {
-  .card:hover .top {
+  .card:hover .top, .card:focus .top {
     -webkit-transform: translateY(0);
             transform: translateY(0);
   }
-  .card:hover .bottom {
+  .card:hover .bottom, .card:focus .bottom {
     -webkit-transform: translateY(4%);
             transform: translateY(4%);
     visibility: visible;
   }
-  .card:hover .mask {
+  .card:hover .mask, .card:focus .mask {
     -webkit-animation: neon 1.5s ease-in-out infinite alternate;
             animation: neon 1.5s ease-in-out infinite alternate;
   }

@@ -22,7 +22,7 @@ html {
     justify-content: center;
     text-align: center;
     padding: 5%;
-    height: 90vh;
+    height: 100vh;
     
     &-text {
         background-image: url('./assets/images/pearl.png');
@@ -62,7 +62,7 @@ html {
             display: flex;
             justify-content: center;
             align-content: center;
-            padding-top: 4%;
+            padding: 4%;
             height: auto;
         }
        
@@ -316,7 +316,8 @@ html {
 //touchscreen card hover 
     @media (any-hover: hover) {
        .card {
-           &:hover {
+           &:hover,
+           &:focus {
         .top {
             transform: translateY(0);
 

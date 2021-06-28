@@ -48,7 +48,7 @@ export default function Resume() {
                     <Row>
                         {projects.map((project, i) => (
                             <Col xs={12} md={6} lg={6} xl={3} key={project.name}>
-                                <Card ref={markedRef}>
+                                <Card ref={markedRef} onTouchStart=''>
                                     <div className='mask'>
                                         <div className='top'>
                                             <Card.Title>{project.name}</Card.Title>
