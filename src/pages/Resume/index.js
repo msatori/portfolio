@@ -1,7 +1,14 @@
 import { React, useState } from 'react';
 import { Card, CardDeck, Row, Col, Container } from 'react-bootstrap';
+import useHover from "@gitgw/use-hover";
 
 export default function Resume() {
+
+    const onHover = ()=>{
+        console.log("OnHover");
+      }
+
+      const markedRef = useHover(onHover);
 
     const [projects] = useState([
 
@@ -41,7 +48,7 @@ export default function Resume() {
                     <Row>
                         {projects.map((project, i) => (
                             <Col xs={12} md={6} lg={6} xl={3} key={project.name}>
-                                <Card>
+                                <Card ref={markedRef}>
                                     <div className='mask'>
                                         <div className='top'>
                                             <Card.Title>{project.name}</Card.Title>
@@ -57,7 +64,9 @@ export default function Resume() {
                                                     <button className='card-btn' href={project.deployUrl}>Visit Site</button>
                                                     <button className='card-btn' href={project.gitUrl}>Visit GitHub Repository</button>
                                                 </Card.Body>
-                                            
+                                                <div className="App">
+      <div ref={markedRef}>Hello</div>
+    </div>
                                         </div>
                                     </div>
                                 </Card>

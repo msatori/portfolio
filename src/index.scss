@@ -54,7 +54,18 @@ html {
        
     }
 
+    
+
     .arrow{
+
+        &-wrapper {
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            padding-top: 4%;
+            height: auto;
+        }
+       
         position:relative;
         width:50px;
         height:50px;
@@ -64,13 +75,13 @@ html {
             position:absolute;
             left:0;
             top:0;
-            width:100%;
-            height:100%;
+            width:5rem;
+            height:5rem;
             box-sizing:border-box;
             border:none;
-            border-bottom:3px solid #fff;
-            border-right:3px solid #fff;
-            animation:animate 1s linear infinite;
+            border-bottom:3px solid rgb(50, 219, 177);
+            border-right:3px solid rgb(50, 219, 177);
+            animation:animate 2s linear infinite;
             &:nth-child(1){
               top:-30px;
               left:-30px;
@@ -277,7 +288,7 @@ html {
 
 @keyframes animate{
     0%{
-      border-color:#fff;
+      border-color:rgb(50, 219, 177);
       transform:translate(0,0);
     }
      20%{
@@ -293,6 +304,11 @@ html {
     }
      20.1%,100%{
       border-color:#4a56ff;
+      box-shadow:
+      0 0 6px rgba(202, 228, 224, 0.98),
+      0 0 30px rgba(228, 226, 202, 0.42),
+      0 0 12px rgba(204, 206, 64, 0.58),
+      0 0 22px rgba(242, 125, 30, 0.84);
     }
   }
 
@@ -334,6 +350,13 @@ html {
 
        &-btn {
            display: list-item;
+       }
+
+       .arrow {
+           span {
+               height: 2rem;
+               width: 2rem;
+           }
        }
    }
    .resume {

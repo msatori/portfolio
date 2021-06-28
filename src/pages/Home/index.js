@@ -35,11 +35,12 @@ export default function HomePage() {
                             I'm Maya.
                         </h1>
                         <p>A midwest-based web developer with a passion for design.</p>
-
-                        <div className="arrow">
-                            <span />
-                            <span />
-                            <span />
+                        <div className="arrow-wrapper">
+                            <div className="arrow">
+                                <span />
+                                <span />
+                                <span />
+                            </div>
                         </div>
                     </div>
                 </div>
