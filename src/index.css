@@ -189,6 +189,22 @@ html {
   border-radius: 15px;
 }
 
+.resume .card:hover .top, .resume .card:focus .top {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+.resume .card:hover .bottom, .resume .card:focus .bottom {
+  -webkit-transform: translateY(4%);
+          transform: translateY(4%);
+  visibility: visible;
+}
+
+.resume .card:hover .mask, .resume .card:focus .mask {
+  -webkit-animation: neon 1.5s ease-in-out infinite alternate;
+          animation: neon 1.5s ease-in-out infinite alternate;
+}
+
 .bio {
   height: auto;
   background-image: url("./assets/images/prism2.png");
@@ -324,22 +340,6 @@ html {
     border-color: #4a56ff;
     -webkit-box-shadow: 0 0 6px rgba(202, 228, 224, 0.98), 0 0 30px rgba(228, 226, 202, 0.42), 0 0 12px rgba(204, 206, 64, 0.58), 0 0 22px rgba(242, 125, 30, 0.84);
             box-shadow: 0 0 6px rgba(202, 228, 224, 0.98), 0 0 30px rgba(228, 226, 202, 0.42), 0 0 12px rgba(204, 206, 64, 0.58), 0 0 22px rgba(242, 125, 30, 0.84);
-  }
-}
-
-@media (any-hover: hover) {
-  .card:hover .top, .card:focus .top {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
-  .card:hover .bottom, .card:focus .bottom {
-    -webkit-transform: translateY(4%);
-            transform: translateY(4%);
-    visibility: visible;
-  }
-  .card:hover .mask, .card:focus .mask {
-    -webkit-animation: neon 1.5s ease-in-out infinite alternate;
-            animation: neon 1.5s ease-in-out infinite alternate;
   }
 }
 

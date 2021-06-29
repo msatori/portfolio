@@ -174,6 +174,27 @@ html {
           border-radius: 15px;
             
         }
+
+       
+                &:hover,
+                &:focus {
+                    .top {
+                        transform: translateY(0);
+            
+                    }
+            
+                    .bottom {
+                        transform: translateY(4%);
+                        visibility: visible;
+                    }
+                    
+                    .mask {
+                        animation: neon 1.5s ease-in-out infinite alternate;  
+                    }
+                
+            }
+         
+        
        
     }
     
@@ -314,28 +335,28 @@ html {
 
 
 //touchscreen card hover 
-    @media (any-hover: hover) {
-       .card {
-           &:hover,
-           &:focus {
-        .top {
-            transform: translateY(0);
+    // @media (any-hover: hover) {
+    //    .card {
+    //        &:hover,
+    //        &:focus {
+    //     .top {
+    //         transform: translateY(0);
 
-        }
+    //     }
 
-        .bottom {
-            transform: translateY(4%);
-            visibility: visible;
-        }
+    //     .bottom {
+    //         transform: translateY(4%);
+    //         visibility: visible;
+    //     }
         
-        .mask {
+    //     .mask {
             
-            animation: neon 1.5s ease-in-out infinite alternate;  
-        }
+    //         animation: neon 1.5s ease-in-out infinite alternate;  
+    //     }
       
-       }
-    }
-      }
+    //    }
+    // }
+    //   }
 //media queries
 @media (max-width: 770px) {
    .hero {

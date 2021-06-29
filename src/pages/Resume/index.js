@@ -1,14 +1,18 @@
-import { React, useState } from 'react';
+import { React, useState, onBlur, onFocus } from 'react';
 import { Card, CardDeck, Row, Col, Container } from 'react-bootstrap';
 import useHover from "@gitgw/use-hover";
-
+import {
+    BrowserView,
+    MobileView,
+    isBrowser,
+    isMobile
+} from "react-device-detect";
 export default function Resume() {
 
-    const onHover = ()=>{
-        console.log("OnHover");
-      }
+    const mobileBorder = {
+        boxShadow: "0 0 6px rgba(172, 206, 221, 0.92),  0 0 30px rgba(50, 189, 199, 0.34),  0 0 12px rgba(16, 130, 165, 0.52),  0 0 21px rgba(207, 30, 242, 0.92),"
+    }
 
-      const markedRef = useHover(onHover);
 
     const [projects] = useState([
 
@@ -48,25 +52,26 @@ export default function Resume() {
                     <Row>
                         {projects.map((project, i) => (
                             <Col xs={12} md={6} lg={6} xl={3} key={project.name}>
-                                <Card ref={markedRef} onTouchStart=''>
+                                <Card>
                                     <div className='mask'>
                                         <div className='top'>
                                             <Card.Title>{project.name}</Card.Title>
-                                            <Card.Img src={require(`../../assets/projects/${i}.png`).default} />
+                                            <MobileView style={mobileBorder}>
+                                                <Card.Img src={require(`../../assets/projects/${i}.png`).default}
+
+                                                />
+                                            </MobileView>
                                         </div>
                                         <div className='bottom'>
-                                               <Card.Body>
-                                                    <Card.Text>
-                                                        {project.description}
-                                                        <br/>
-                                                        {project.role}
-                                                        </Card.Text>
-                                                    <button className='card-btn' href={project.deployUrl}>Visit Site</button>
-                                                    <button className='card-btn' href={project.gitUrl}>Visit GitHub Repository</button>
-                                                </Card.Body>
-                                                <div className="App">
-      <div ref={markedRef}>Hello</div>
-    </div>
+                                            <Card.Body>
+                                                <Card.Text>
+                                                    {project.description}
+                                                    <br />
+                                                    {project.role}
+                                                </Card.Text>
+                                                <button className='card-btn' href={project.deployUrl}>Visit Site</button>
+                                                <button className='card-btn' href={project.gitUrl}>Visit GitHub Repository</button>
+                                            </Card.Body>
                                         </div>
                                     </div>
                                 </Card>
