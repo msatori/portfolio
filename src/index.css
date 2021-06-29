@@ -122,6 +122,10 @@ html {
           animation-delay: 0.4s;
 }
 
+.hero .mobile-view {
+  color: #32dbb1;
+}
+
 .resume {
   height: auto;
   padding: 3%;

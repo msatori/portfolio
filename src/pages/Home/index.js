@@ -3,6 +3,12 @@ import { React } from 'react';
 import {
     Link
 } from "react-router-dom";
+import {
+    BrowserView,
+    MobileView,
+    isBrowser,
+    isMobile
+} from "react-device-detect";
 
 import { Fab } from '@material-ui/core'
 //component imports
@@ -34,6 +40,13 @@ export default function HomePage() {
                             <br />
                             I'm Maya.
                         </h1>
+                        <MobileView>
+                            <h1 className='mobile-view'>Hello Universe,
+                                <br />
+                                I'm Maya.
+                            </h1>
+                            <p>A midwest-based web developer with a passion for design.</p>
+                        </MobileView>
                         <p>A midwest-based web developer with a passion for design.</p>
                         <div className="arrow-wrapper">
                             <div className="arrow">

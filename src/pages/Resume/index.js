@@ -1,12 +1,6 @@
 import { React, useState, onBlur, onFocus } from 'react';
 import { Card, CardDeck, Row, Col, Container } from 'react-bootstrap';
-import useHover from "@gitgw/use-hover";
-import {
-    BrowserView,
-    MobileView,
-    isBrowser,
-    isMobile
-} from "react-device-detect";
+
 export default function Resume() {
 
     const mobileBorder = {
