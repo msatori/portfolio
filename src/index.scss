@@ -28,6 +28,7 @@ html {
         background-image: url('./assets/images/pearl.png');
         background-repeat: repeat;
         background-clip: text;
+        color: transparent;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             -webkit-font-smoothing: antialiased;
@@ -57,12 +58,12 @@ html {
     
 
     .arrow{
-
+        
         &-wrapper {
+            padding: 8%;
             display: flex;
             justify-content: center;
             align-content: center;
-            padding: 4%;
             height: auto;
         }
        
@@ -207,7 +208,7 @@ html {
     background-size: cover;
     background-position: center;
     margin: 3% ;
-    padding: 3%;
+    padding: 5% 3% 5% 3%;
     text-align: center;
     border-radius: 15px;
     
@@ -334,56 +335,18 @@ html {
   }
 
 
-//touchscreen card hover 
-    // @media (any-hover: hover) {
-    //    .card {
-    //        &:hover,
-    //        &:focus {
-    //     .top {
-    //         transform: translateY(0);
-
-    //     }
-
-    //     .bottom {
-    //         transform: translateY(4%);
-    //         visibility: visible;
-    //     }
-        
-    //     .mask {
-            
-    //         animation: neon 1.5s ease-in-out infinite alternate;  
-    //     }
-      
-    //    }
-    // }
-    //   }
 //media queries
+@media (max-width: 1980px) {
+    .hero {
+        h1 {
+            padding-top: 8%;
+            font-size: 10vh;
+        }
+    }
+}
 @media (max-width: 770px) {
-   .hero {
-       height: 100vh;
-       h1 {
-           font-size: 10vh;
-       }
-
-       &-btns {
-           font-size: 5vh;
-         
-       }
-
-       &-btn {
-           display: list-item;
-       }
-
-       .arrow {
-           span {
-               height: 2rem;
-               width: 2rem;
-           }
-       }
-   }
-   .resume {
-       height: auto;
-   }
+  
+  
    .card {
        margin-top:10%
    }
@@ -392,7 +355,29 @@ html {
 }
 
 @media (max-width: 600px) {
+
     .card {
         margin-top: 0;
+    }
+}
+
+@media (max-width: 430px) {
+    .hero {
+        h1 {
+            font-size: 7vh;
+        }
+
+        p {
+            font-size: 5vh;
+        }
+
+        .arrow {
+            margin-top: 8%;
+
+            span {
+                height: 3rem;
+                width: 3rem;
+            }
+        }
     }
 }

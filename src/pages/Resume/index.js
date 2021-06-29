@@ -56,11 +56,11 @@ export default function Resume() {
                                     <div className='mask'>
                                         <div className='top'>
                                             <Card.Title>{project.name}</Card.Title>
-                                            <MobileView style={mobileBorder}>
+
                                                 <Card.Img src={require(`../../assets/projects/${i}.png`).default}
 
                                                 />
-                                            </MobileView>
+                                   
                                         </div>
                                         <div className='bottom'>
                                             <Card.Body>
