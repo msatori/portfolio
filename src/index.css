@@ -174,10 +174,12 @@ html {
   font-family: "Special Elite", cursive;
   margin: 1%;
   padding: 2%;
+  color: black;
 }
 
 .resume .card-btn:hover, .resume .card-btn:active {
   color: white;
+  text-decoration: none;
 }
 
 .resume .card-text {

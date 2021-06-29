@@ -28,7 +28,7 @@ html {
         background-image: url('./assets/images/pearl.png');
         background-repeat: repeat;
         background-clip: text;
-        color: transparent;
+       color: transparent;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             -webkit-font-smoothing: antialiased;
@@ -159,10 +159,15 @@ html {
             font-family: $heading;
             margin: 1%;
             padding: 2%;
+            color:black;
 
-            &:hover, &:active {
-                color: white;
-            }
+           
+                &:hover, &:active {
+                    color: white;
+                    text-decoration: none;
+                }
+            
+
         }
 
         &-text {
