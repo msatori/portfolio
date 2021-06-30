@@ -39,7 +39,8 @@ html {
           -webkit-text-fill-color: transparent;
           -ms-text-fill-color: transparent;
            -moz-text-fill-color: transparent;
-        color: transparent;
+           -webkit-box-decoration-break: clone;
+           box-decoration-break: clone;
         animation-name: masked-animation;
           -webkit-animation-name: masked-animation;
         animation-duration: 50s;
