@@ -24,6 +24,7 @@ html {
   font-size: 3vw;
   font-family: "Special Elite", cursive;
   letter-spacing: 1vw;
+  display: inline;
   text-align: center;
   background: #fffda0;
   background: -webkit-linear-gradient(left, #32dbb1 0%, rgba(235, 30, 242, 0.84) 25%, #6381d1 50%, #f1e96fd0 100%) repeat;
