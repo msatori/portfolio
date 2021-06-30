@@ -42,29 +42,18 @@ html {
 }
 
 .hero p {
-  background: -webkit-linear-gradient(right, #f1e96fd0 0%, #6381d1 25%, rgba(235, 30, 242, 0.84) 50%, #32dbb1 100%) repeat;
+  background: -webkit-linear-gradient(left, #f1e96fd0 0%, #63d1b6 25%, rgba(235, 30, 242, 0.84) 50%, #328fdb 100%) repeat;
   -webkit-background-clip: text;
   -ms-background-clip: text;
   background-clip: text;
   animation-name: masked-animation;
   -webkit-animation-name: masked-animation;
-  animation-duration: 50s;
-  -webkit-animation-duration: 50s;
+  animation-duration: 55s;
+  -webkit-animation-duration: 55s;
   animation-iteration-count: infinite;
   -webkit-animation-iteration-count: infinite;
   animation-timing-function: linear;
   -webkit-animation-timing-function: linear;
-}
-
-.hero-btns {
-  padding: 1%;
-}
-
-.hero-btn {
-  padding: 2%;
-  display: inline;
-  font-size: 3vh;
-  list-style: none;
 }
 
 .hero .arrow {
@@ -122,10 +111,6 @@ html {
   left: 0;
   -webkit-animation-delay: 0.4s;
           animation-delay: 0.4s;
-}
-
-.hero .mobile-view {
-  color: #32dbb1;
 }
 
 .resume {
@@ -251,16 +236,26 @@ html {
   font-weight: 900;
 }
 
-.bio .resume-container {
-  margin: 4%;
+.bio .dl-container {
+  padding: 3%;
 }
 
 .bio a {
   font-family: "Special Elite", cursive;
   color: black;
   border: 5px solid black;
-  padding: 1%;
+  padding: 1.5%;
   border-radius: 15px;
+}
+
+.bio button {
+  font-family: "Special Elite", cursive;
+  color: black;
+  border: 5px solid black;
+  padding: 1.5%;
+  border-radius: 15px;
+  background: transparent;
+  margin-top: 2%;
 }
 
 .bio li {

@@ -34,8 +34,13 @@ html {
            -webkit-box-decoration-break: clone;
            box-decoration-break: clone;
        
-      
+       
+ 
+           
+           
         }
+       
+ 
         
         h1 {
         background: -webkit-linear-gradient( left, rgb(50, 219, 177) 0%, rgba(235, 30, 242, 0.84) 25%, #6381d1 50%, #f1e96fd0 100%) repeat;
@@ -54,34 +59,21 @@ html {
     }
     
     p {
-        background: -webkit-linear-gradient( right, #f1e96fd0  0%, #6381d1 25%,  rgba(235, 30, 242, 0.84) 50%, rgb(50, 219, 177) 100%) repeat;
+        background: -webkit-linear-gradient( left, #f1e96fd0  0%, #63d1b6 25%,  rgba(235, 30, 242, 0.84) 50%, rgb(50, 143, 219) 100%) repeat;
         -webkit-background-clip: text;
         -ms-background-clip: text;
         -moz-background-clip: text;
         background-clip: text;
         animation-name: masked-animation;
         -webkit-animation-name: masked-animation;
-        animation-duration: 50s;
-            -webkit-animation-duration: 50s;
+        animation-duration: 55s;
+            -webkit-animation-duration: 55s;
         animation-iteration-count: infinite;
         -webkit-animation-iteration-count: infinite;
         animation-timing-function: linear;
             -webkit-animation-timing-function: linear;
         }
-    &-btns {
-        padding: 1%;
-
-    }
-    &-btn {
-        padding: 2%;
-        display: inline;
-        font-size: 3vh;
-        list-style: none;
-       
-    }
-
-    
-
+  
     .arrow{
         
         &-wrapper {
@@ -126,10 +118,7 @@ html {
         }
     }
 
-    .mobile-view {
-        color: rgb(50, 219, 177);
-    }
-
+   
 }
 
 .resume {
@@ -162,6 +151,8 @@ html {
             color: white;
             padding: 2%;
         }
+
+        
         
         .bottom {
             visibility: hidden;
@@ -257,16 +248,26 @@ html {
         font-weight: 900;
     }
 
-    .resume-container {
-        margin: 4%;
+    .dl-container {
+        padding: 3%;
     }
 
     a {
         font-family: $heading;
         color: black;
         border: 5px solid black;
-        padding: 1%;
+        padding: 1.5%;
         border-radius: 15px;
+    }
+
+    button {
+        font-family: $heading;
+        color: black;
+        border: 5px solid black;
+        padding: 1.5%;
+        border-radius: 15px;
+        background: transparent;
+        margin-top: 2%;
     }
 
  
