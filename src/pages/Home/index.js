@@ -36,11 +36,13 @@ export default function HomePage() {
             <section className="hero d-flex justify-content-center">
                 <div className="hero-wrapper">
                     <div className="hero-text t-bg">
+                        <span>
                         <h1>Hello Universe,
                             <br />
                             I'm Maya.
                         </h1>
                            <p>A midwest-based web developer with a passion for design.</p>
+                           </span>
                         <div className="arrow-wrapper">
                             <div className="arrow">
                                 <span />
