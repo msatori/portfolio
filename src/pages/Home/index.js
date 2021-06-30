@@ -33,14 +33,15 @@ export default function HomePage() {
 
     return (
         <div>
-            <section className="hero d-flex justify-content-center">
+            <section className="hero">
                 <div className="hero-wrapper">
-               <span>
-                    <div className="hero-text t-bg">
+                    <div className="hero-text">
+             
                         <h1>Hello Universe,
                             <br />
                             I'm Maya.
                         </h1>
+            
                            <p>A midwest-based web developer with a passion for design.</p>
                         <div className="arrow-wrapper">
                             <div className="arrow">
@@ -50,7 +51,6 @@ export default function HomePage() {
                             </div>
                         </div>
                     </div>
-                 </span>
                 </div>
             </section>
             <br />
