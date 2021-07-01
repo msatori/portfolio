@@ -37,12 +37,12 @@ export default function HomePage() {
                 <div className="hero-wrapper">
                     <div className="hero-text">
              
-                        <h1>Hello Universe,
+                        <h1 id="a-t">Hello Universe,
                             <br />
                             I'm Maya.
                         </h1>
             
-                           <p>A midwest-based web developer with a passion for design.</p>
+                           <p id='a-t'>A midwest-based web developer with a passion for design.</p>
                         <div className="arrow-wrapper">
                             <div className="arrow">
                                 <span />

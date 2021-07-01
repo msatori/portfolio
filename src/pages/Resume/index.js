@@ -36,12 +36,13 @@ export default function Resume() {
             role: "UI/Frontend",
             description: "Web developer quiz app",
             gitUrl: "https://github.com/jess-smith49/dev-tools",
-            deployUrl: " https://murmuring-scrubland-26245.herokuapp.com/"
+            deployUrl: "https://salty-hollows-23109.herokuapp.com/"
         },
     ]);
     return (
         <section className="resume">
             <Container fluid >
+                <h2 id='a-t'>Some of My Work</h2>
                 <CardDeck className='justify-content-center'>
                     <Row>
                         {projects.map((project, i) => (

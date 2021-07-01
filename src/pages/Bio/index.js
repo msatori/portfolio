@@ -23,10 +23,9 @@ export default function Bio() {
         <div className="bio-wrapper">
           <div className='bio-text'>
             <h3>Just me, Maya Santiago</h3>
-            <p>When COVID upended my career in restaurant management, I found myself with time to comtemplate my life for the first time since becoming an adult.
-              I decided to use the gift that fate had given me and make a complete 180 with my life.
+            <p>When COVID upended my career in restaurant management, I found myself comtemplating where I wanted to take my life.
               As I thought about job industries where I would be happy, one thing stuck in my mind. I wanted to create beautiful designs for people and have them be used around the world.
-              That train of though brought me to web design, and here I am today, a full-stack web developer.
+              That train of thought brought me to web design, and here I am today, a full-stack web developer.
             </p>
             <div className="dl-container">
               <a href={mayaResume} id='btn' target="_blank" rel="nonreferrer" download="Maya Santiago">Download My Resume</a>
