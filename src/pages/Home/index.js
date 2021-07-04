@@ -1,36 +1,7 @@
 //utility imports
 import { React } from 'react';
-import {
-    Link
-} from "react-router-dom";
-import {
-    BrowserView,
-    MobileView,
-    isBrowser,
-    isMobile
-} from "react-device-detect";
 
-import { Fab } from '@material-ui/core'
-//component imports
-import Resume from '../Resume';
-import Contact from '../Contact';
-import Bio from '../Bio';
 export default function HomePage() {
-    const pages = [
-        {
-            name: 'About Me',
-            link: '/about'
-        },
-        {
-            name: 'My Work',
-            link: '/resume'
-        },
-        {
-            name: 'Contact Me',
-            link: '/contact'
-        }
-    ];
-
     return (
         <div>
             <section className="hero">
@@ -53,12 +24,7 @@ export default function HomePage() {
                     </div>
                 </div>
             </section>
-            <br />
-            <Bio />
-            <br />
-            <Resume />
-            <br />
-            <Contact />
+          
         </div>
     )
 }

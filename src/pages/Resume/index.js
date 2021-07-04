@@ -1,12 +1,7 @@
-import { React, useState, onBlur, onFocus } from 'react';
+import { React, useState } from 'react';
 import { Card, CardDeck, Row, Col, Container } from 'react-bootstrap';
 
 export default function Resume() {
-
-    const mobileBorder = {
-        boxShadow: "0 0 6px rgba(172, 206, 221, 0.92),  0 0 30px rgba(50, 189, 199, 0.34),  0 0 12px rgba(16, 130, 165, 0.52),  0 0 21px rgba(207, 30, 242, 0.92),"
-    }
-
 
     const [projects] = useState([
 
@@ -25,7 +20,7 @@ export default function Resume() {
             gitUrl: "https://github.com/msatori/budgie-the-tracker"
         },
         {
-            name: "The Menu",
+            name: "Today's Menu",
             role: "UI/Fronend Developer",
             description: "A collaborative project with Jessica Smith and Mai Yia Xiong",
             deployUrl: "https://jess-smith49.github.io/the-menu/",
@@ -33,14 +28,14 @@ export default function Resume() {
         },
         {
             name: "Dev Learn",
-            role: "UI/Frontend",
+            role: "UI/Frontend Developer",
             description: "Web developer quiz app",
             gitUrl: "https://github.com/jess-smith49/dev-tools",
             deployUrl: "https://salty-hollows-23109.herokuapp.com/"
         },
     ]);
     return (
-        <section className="resume">
+        <section className="resume" id='work'>
             <Container fluid >
                 <h2 id='a-t'>Some of My Work</h2>
                 <CardDeck className='justify-content-center'>
@@ -52,10 +47,10 @@ export default function Resume() {
                                         <div className='top'>
                                             <Card.Title>{project.name}</Card.Title>
 
-                                                <Card.Img src={require(`../../assets/projects/${i}.png`).default}
+                                            <Card.Img src={require(`../../assets/projects/${i}.png`).default}
 
-                                                />
-                                   
+                                            />
+
                                         </div>
                                         <div className='bottom'>
                                             <Card.Body>
@@ -66,7 +61,7 @@ export default function Resume() {
                                                 </Card.Text>
                                                 <a className='card-btn' href={project.deployUrl}>Visit Site</a>
 
-                                                <br/>
+                                                <br />
                                                 <a className='card-btn' href={project.gitUrl}>Visit GitHub Repository</a>
                                             </Card.Body>
                                         </div>

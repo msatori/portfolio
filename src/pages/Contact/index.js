@@ -5,7 +5,7 @@ import { Row, Col } from 'react-bootstrap';
 export default function Contact() {
 
     return (
-        <section className='contact'>
+        <section className='contact' id='contact'>
                 <div className='contact-content'>
                     <h1 className='contact-heading'> Contact Me</h1>
             <Row>
