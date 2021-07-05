@@ -59,10 +59,10 @@ export default function Resume() {
                                                     <br />
                                                     {project.role}
                                                 </Card.Text>
-                                                <a className='card-btn' href={project.deployUrl}>Visit Site</a>
+                                                <a className='card-btn' target="_blank" rel="noreferrer" href={project.deployUrl}>Visit Site</a>
 
                                                 <br />
-                                                <a className='card-btn' href={project.gitUrl}>Visit GitHub Repository</a>
+                                                <a className='card-btn' target="_blank" rel="noreferrer" href={project.gitUrl}>Visit GitHub Repository</a>
                                             </Card.Body>
                                         </div>
                                     </div>
