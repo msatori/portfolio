@@ -409,6 +409,21 @@ html {
 
 @media (max-width: 600px) {
 
+    .hero {
+        p {
+            font-size: 18pt;
+        }
+
+        .arrow {
+            margin-top: 4%;
+
+            span {
+                height: 3rem;
+                width: 3rem;
+            }
+        }
+    }
+
     .card {
         margin-top: 0;
     }
@@ -416,14 +431,7 @@ html {
 
 @media (max-width: 430px) {
     .hero {
-        h1 {
-            font-size: 7vh;
-        }
-
-        p {
-            font-size: 5vh;
-        }
-
+       
         .arrow {
             margin-top: 8%;
 
